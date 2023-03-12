@@ -1,0 +1,13 @@
+.container {
+    height: 100%;
+    display: flex;
+}
+
+.side-bar-col {
+    flex: 25%;
+}
+
+.content {
+    width: 100%;
+    flex: 75%;
+}

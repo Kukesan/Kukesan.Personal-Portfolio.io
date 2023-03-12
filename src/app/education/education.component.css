@@ -1,0 +1,58 @@
+.container {
+    height: 100%;
+    display: flex;
+   
+   
+}
+.side-bar{
+    width:25%;
+    flex: 25%;
+    height: 100%;
+    background-color: #2a3950;
+}
+.content{
+    width: 100%;
+    flex: 75%;
+    background: radial-gradient(circle at 0% 0.5%, rgb(241, 241, 242) 0.1%, rgb(224, 226, 228) 100.2%);
+}
+
+.education{
+    margin-top: 10vh;
+}
+
+.education-row{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    padding: 1em 2em;
+    margin-top: 2%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+}
+
+.education-detail{
+    padding: 2vw;
+}
+
+.education-heading{
+    font-size: 20px;
+    font-family: 'Helvetica';
+    font-weight: 600;
+}
+
+.education-subject{
+    margin-top: 1vh;
+    font-size: 15px;
+    font-family: 'Helvetica';
+}
+
+.education-duration{
+    margin-top: 1vh;
+    font-size: 15px;
+    font-family: 'sans-serif';
+}
+
+.education-img{
+    width: 18%;
+}

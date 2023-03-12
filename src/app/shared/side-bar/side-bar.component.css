@@ -1,0 +1,44 @@
+
+.side-bar{
+    height: 100%;
+    background-color: #2a3950;
+}
+.side-bar-row{
+    padding: 1em 2em;
+    border: none;
+    display: flex;
+}
+
+.side-bar-row-img{
+    width: 25px;
+    margin-right: 1vw;
+    filter: brightness(0) invert(1);
+}
+
+.side-bar-text{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.active{
+    color:#009393;
+    filter: invert(40%) sepia(47%) saturate(1496%) hue-rotate(143deg) brightness(92%) contrast(101%) ;
+}
+
+.side-bar-row:hover{
+    
+}
+
+.side-bar-img{
+    margin-top: 5%;
+    width:180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
