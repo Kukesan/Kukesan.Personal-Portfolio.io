@@ -6,4 +6,19 @@
   html, body {
     height: 100%;
     margin: 0;
+    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   }
+
+.container {
+    height: 100%;
+    display: flex;
+}
+.side-bar-col{
+    flex: 25%;
+}
+.content{
+    width: 100%;
+    flex: 75%;
+    
+    height: auto;
+}

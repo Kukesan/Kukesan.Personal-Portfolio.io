@@ -1,0 +1,110 @@
+.home {
+    background-image: url("../../assets/Images/nikita-kachanovsky-OVbeSXRk_9E-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro-details {
+    margin-top: 15%;
+    margin-left: 10%;
+}
+
+.intro-start {
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.intro-name {
+    font-size: 45px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.intro-subject {
+    width: 30%;
+    color: white;
+    font-family:  Verdana,sans-serif;
+    margin-top: 4vh;
+    font-style: italic;
+}
+
+/* .hire {
+    margin-top: 4vh;
+    appearance: none;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #016171;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    outline: none;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 12%;
+    will-change: transform;
+}
+
+.hire:disabled {
+    pointer-events: none;
+}
+
+.hire:hover {
+    color: white;
+    background-color: #016171;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.hire:active {
+    box-shadow: none;
+    transform: translateY(0);
+} */
+
+
+/* CSS */
+.hire {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.hire:hover,
+.hire:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.hire:active {
+  background: var(--color);
+  color: #fff;
+}

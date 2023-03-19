@@ -10,25 +10,10 @@ import { concatMap, delay, map, tap } from "rxjs/operators";
 })
 export class HomeComponent implements OnInit {
 
-  myName: string = "Ketheeswaran Kukesan";
-  displayName: string = '';
-
-  i:number=0;
-
-  constructor(private router:Router) { }
-
-  ngOnInit(): void {
-    let timer$ = timer(200,300);
-    timer$.subscribe((d)=>{
-      console.log("intime")
-        this.displayName=this.displayName+ this.myName.charAt(this.i);
-        this.i++;
-    })
+  constructor(){
 
   }
-
-  
-  hire() {
-     this.router.navigate(['contact']);
-  }
+   ngOnInit(): void {
+     
+   }
 }

@@ -1,10 +1,13 @@
 
 .side-bar{
     height: 100%;
-    background-color: #2a3950;
+    background-color: #202e41;
+    width: 25%;
+    position: fixed;
+    display: block;
 }
 .side-bar-row{
-    padding: 1em 2em;
+    padding: 1em 3em;
     border: none;
     display: flex;
 }
@@ -13,6 +16,13 @@
     width: 25px;
     margin-right: 1vw;
     filter: brightness(0) invert(1);
+}
+
+.side-bar-name{
+    font-size: 28px;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .side-bar-text{
@@ -24,7 +34,6 @@
 
 
 .active{
-    color:#009393;
     filter: invert(40%) sepia(47%) saturate(1496%) hue-rotate(143deg) brightness(92%) contrast(101%) ;
 }
 
@@ -40,5 +49,6 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
+    border: 5px solid #6098BA;
 }
 

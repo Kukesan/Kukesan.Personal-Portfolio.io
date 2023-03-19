@@ -6,17 +6,20 @@ import { EducationComponent } from './education/education.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';
+import { LandingComponent } from './landing/landing.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { SkillsComponent } from './skills/skills.component';
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
+  {path:'',component:LandingComponent},
   {path:'education',component:EducationComponent},
   {path:'home',component:HomeComponent},
   {path:'contact',component:ContactComponent},
   {path:'info',component:InfoComponent},
   {path:'experience',component:ExperienceComponent},
   {path:'projects',component:ProjectsComponent},
-  {path:'achive',component:AchiveComponent}
+  {path:'achive',component:AchiveComponent},
+  {path:'skills',component:SkillsComponent}
 ];
 
 @NgModule({

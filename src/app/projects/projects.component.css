@@ -1,18 +1,4 @@
-.container {
-    height: 100%;
-    display: flex;
-}
-
-.side-bar-col {
-    flex: 25%;
-}
-
-.content {
-    width: 100%;
-    flex: 75%;
-}
-
-.project-container{
+.project-container {
     margin-top: 10%;
 }
 
@@ -21,9 +7,16 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    padding: 1em 2em;
+    padding: 2em 2em;
     margin-top: 1vh;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+}
+
+.project-row-img {
+    width: 7%;
+    height: 9%;
+    filter: invert(32%) sepia(99%) saturate(916%) hue-rotate(4deg) brightness(96%) contrast(99%);
 }
 
 .project-heading {
@@ -31,6 +24,7 @@
     font-family: 'Helvetica';
     font-weight: 600;
     margin-left: 3vw;
+    color: #353535;
 }
 
 .project-subject {
@@ -38,22 +32,5 @@
     font-size: 15px;
     font-family: 'Helvetica';
     margin-left: 3vw;
-}
-
-ul li {
-    list-style: none;
-    position: relative;
-    padding: 3px 5px;
-    margin: 2%;
-}
-
-ul li::before {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    top: 6px;
-    height: 20px;
-    width: 20px;
-    background-size: contain;
-    background-image: url(../../assets/Images/bullet-1.png);
+    color: #353535;
 }

@@ -1,0 +1,121 @@
+<div class="container">
+    <div class="side-bar-col">
+        <app-side-bar></app-side-bar>
+    </div>
+    <div class="content">
+        <div class="skills-container">
+            <div class="skill-row" (mouseover)="skillSubjectVisible(1)" (mouseleave)="skillSubjectNotVisible(1)">
+                <p class="skill-heading" id="skill1" >Programming Skills</p>
+                <ul class="skill-subjects" id="skill-sub1">
+                    <li>C</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>Swift</li>
+                </ul>
+            </div>
+            <div class="skill-row"  (mouseover)="skillSubjectVisible(2)" (mouseleave)="skillSubjectNotVisible(2)">
+                <p class="skill-heading" id="skill2">Web Development</p>
+                <ul class="skill-subjects" id="skill-sub2">
+                    <li>Angular</li>
+                    <li>PHP</li>
+                    <li>.NET Core</li>
+                    <li>JavaScript</li>
+                    <li>CSS</li>
+                    <li>HTML</li> 
+                    <li>Bootstrap</li>
+                </ul>
+            </div>
+            <div class="skill-row" (mouseover)="skillSubjectVisible(3)" (mouseleave)="skillSubjectNotVisible(3)">
+                <p class="skill-heading" id="skill3"  >Database</p>
+                <ul class="skill-subjects" id="skill-sub3">
+                    <li>MSSQL</li>
+                    <li>MySQL</li>
+                    <li>Firebase</li>
+                </ul>
+            </div>
+            <div class="skill-row" (mouseover)="skillSubjectVisible(4)" (mouseleave)="skillSubjectNotVisible(4)">
+                <p class="skill-heading" id="skill4">Operating Systems</p>
+                <ul class="skill-subjects" id="skill-sub4">
+                    <li>Ubuntu</li>
+                    <li>Windows</li>
+                    <li>MacOS</li>
+                </ul>
+            </div>
+            <div class="skill-row" (mouseover)="skillSubjectVisible(5)" (mouseleave)="skillSubjectNotVisible(5)">
+                <p class="skill-heading" id="skill5">Graphics</p>
+                <ul class="skill-subjects" id="skill-sub5">
+                    <li>Adobe Photoshop</li>
+                    <li>Lightroom</li>
+                </ul>
+            </div>
+            <div class="skill-row" (mouseover)="skillSubjectVisible(6)" (mouseleave)="skillSubjectNotVisible(6)">
+                <p class="skill-heading" id="skill6">IDEs</p>
+                <ul class="skill-subjects" id="skill-sub6">
+                    <li>Vs Code</li>
+                    <li>Visual Studio Code</li>
+                    <li>IntelliJ</li>
+                    <li>Xcode</li>
+                </ul>
+            </div>
+            <div class="skill-row" (mouseover)="skillSubjectVisible(7)" (mouseleave)="skillSubjectNotVisible(7)">
+                <p class="skill-heading" id="skill7" >Version Control</p>
+                <ul class="skill-subjects" id="skill-sub7">
+                    <li>Git</li>
+                    <li>SourceTree</li>
+                </ul>
+            </div>
+        </div>
+        <div class="link-container">
+            <div class="link-row">
+                <div class="link-card">
+                    <img class="link-card-photo" src="../../assets/Images/linkedin.png">
+                    <div class="link-card-heading">LinkedIn</div>
+                    <form action="https://www.linkedin.com/in/ketheeswaran-kukesan/" target="_blank">
+                        <button class="link-card-button">Click Here</button>
+                    </form>
+                </div>
+                <div class="link-card">
+                    <img class="link-card-photo" src="../../assets/Images/github.png">
+                    <div class="link-card-heading">Git Hub</div>
+                    <form action="https://github.com/Kukesan" target="_blank">
+                        <button class="link-card-button" href="https://www.linkedin.com/in/ketheeswaran-kukesan/">Click
+                            Here</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="link-row">
+                <div class="link-card">
+                    <img class="link-card-photo" src="../../assets/Images/hacherrank.png">
+                    <div class="link-card-heading">Hacker Rank</div>
+                    <form action="https://www.hackerrank.com/K_Kukesan?hr_r=1" target="_blank">
+                        <button class="link-card-button">Click Here</button>
+                    </form>
+                </div>
+                <div class="link-card">
+                    <img class="link-card-photo" src="../../assets/Images/pinterest.png">
+                    <div class="link-card-heading">Pinterest</div>
+                    <form action="https://www.pinterest.com/K_Kukesan/_saved/" target="_blank">
+                        <button class="link-card-button">Click Here</button>
+                    </form>
+                </div>
+            </div>
+            <div class="link-row">
+                <div class="link-card">
+                    <img class="link-card-photo" src="../../assets/Images/sololearn.png">
+                    <div class="link-card-heading">Solo Learn</div>
+                    <form action="https://www.linkedin.com/in/ketheeswaran-kukesan/" target="_blank">
+                        <button class="link-card-button">Click Here</button>
+                    </form>
+                </div>
+                <div class="link-card">
+                    <img class="link-card-photo" src="../../assets/Images/kaggle.png">
+                    <div class="link-card-heading">Kaggle</div>
+                    <form action="https://www.linkedin.com/in/ketheeswaran-kukesan/" target="_blank">
+                        <button class="link-card-button">Click Here</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

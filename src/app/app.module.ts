@@ -13,6 +13,8 @@ import { InfoComponent } from './info/info.component';
 import { AchiveComponent } from './achive/achive.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { LandingComponent } from './landing/landing.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ProjectsComponent } from './projects/projects.component';
     InfoComponent,
     AchiveComponent,
     ExperienceComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    LandingComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
