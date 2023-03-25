@@ -10,7 +10,6 @@
   }
 
 .container {
-    height: 100%;
     display: flex;
 }
 .side-bar-col{
@@ -19,6 +18,4 @@
 .content{
     width: 100%;
     flex: 75%;
-    
-    height: auto;
 }

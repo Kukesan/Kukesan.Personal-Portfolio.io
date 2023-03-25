@@ -4,19 +4,22 @@
 
 .skills-container {
     padding: 2%;
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-    /* background-color: white; */
-    width: 40%;
-    margin-left: 4%;
+    width: 60%;
+    margin-left: 6%;
     margin-right: auto;
     margin-top: 5%;
-    height: 80%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    height: auto;
+    display: flex;
+}
+
+.skills-col{
+    margin-right: auto;
+    display: block;
 }
 
 .skill-row {
-    margin: 2%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: white;
     padding: 1em;
 }
 
@@ -32,17 +35,16 @@
     font-family: Arial, Helvetica, sans-serif;
     color: #353535;
     margin-left: 2vw;
-    display: none;
+    display: block;
     margin-top: 1vh;
 }
 
 .link-container {
     padding: 2%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: white;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white; */
     width: 40%;
     margin-left: auto;
-    margin-right: 4%;
     margin-top: 5%;
     height: 80%;
 }
@@ -53,15 +55,15 @@
 }
 
 .link-card {
-    margin: 1%;
+    margin-top: 1%;
     width: 10%;
     height: auto;
     flex: auto;
 }
 
 .link-card-photo {
-    width: 40%;
-    height: 10vh;
+    width: 30%;
+    height: 8vh;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -109,3 +111,8 @@
 .link-card-button:not([disabled]):hover {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.5), -.125rem -.125rem 0.5rem #2a3950, .125rem .125rem 0.5rem #009393;
 }
+
+.verticalLine {
+    border-left: 4px solid #202e41;
+    padding: 5%;
+  }
