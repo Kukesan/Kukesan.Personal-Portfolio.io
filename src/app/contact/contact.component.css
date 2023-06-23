@@ -1,226 +1,150 @@
+.container {
+  display: block;
+}
 
-  body, button, input {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    letter-spacing: 1.4px;
+.content {
+  width: 70%;
+  height: 350px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 120px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 120px;
+}
 
-  }
-  
-  .contact-container {
-   
-    flex: 0 1 700px;
-    margin: auto;
-    padding: 10px;
-    width: 60%;
-  }
-  
-  .screen {
-    margin-top:20vh ;
-    position: relative;
-    background: #3e3e3e;
-    border-radius: 15px;
-  }
-  
-  .screen:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 20px;
-    right: 20px;
-    bottom: 0;
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
-    z-index: -1;
-  }
-  
-  .screen-header {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    background: #4d4d4f;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-  }
-  
-  .screen-header-left {
-    margin-right: auto;
-  }
-  
-  .screen-header-button {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    margin-right: 3px;
-    border-radius: 8px;
-    background: white;
-  }
-  
-  .screen-header-button.close {
-    background: #ffffff;
-  }
-  
-  .screen-header-button.maximize {
-    background: #e8e925;
-  }
-  
-  .screen-header-button.minimize {
-    background: #74c54f;
-  }
-  
-  .screen-header-right {
-    display: flex;
-  }
-  
-  .screen-header-ellipsis {
-    width: 3px;
-    height: 3px;
-    margin-left: 2px;
-    border-radius: 8px;
-    background: #999;
-  }
-  
-  .screen-body {
-    display: flex;
-  }
-  
-  .screen-body-item {
-    flex: 1;
-    padding: 50px;
-  }
-  
-  .screen-body-item.left {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .app-title {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    color: #ffffff;
-    font-size: 26px;
-  }
-  
-  .app-title:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    width: 25px;
-    height: 4px;
-    background: #ffffff;
-  }
-  
-  .app-contact {
-    margin-top: auto;
-    font-size: 8px;
-    color: #888;
-  }
-  
-  .app-form-group {
-    margin-bottom: 15px;
-  }
-  
-  .app-form-group.message {
-    margin-top: 40px;
-  }
-  
-  .app-form-group.buttons {
-    margin-bottom: 0;
-    text-align: right;
-  }
-  
-  .app-form-control {
-    width: 100%;
-    padding: 10px 0;
-    background: none;
-    border: none;
-    border-bottom: 1px solid #666;
-    color: #ddd;
-    font-size: 14px;
-    text-transform: uppercase;
-    outline: none;
-    transition: border-color .2s;
-  }
-  
-  .app-form-control::placeholder {
-    color: #666;
-  }
-  
-  .app-form-control:focus {
-    border-bottom-color: #ddd;
-  }
-  
-  .app-form-button {
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 14px;
-    cursor: pointer;
-    outline: none;
-    padding:  0 10px;
-  }
-  
-  .app-form-button:hover {
-    color: #6098BA;
-  }
-  
-  .credits {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    color: #ffa4bd;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 16px;
-    font-weight: normal;
-  }
-  
-  .credits-link {
-    display: flex;
-    align-items: center;
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .dribbble {
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-  }
-  
-  @media screen and (max-width: 520px) {
-    .screen-body {
-      flex-direction: column;
-    }
-  
-    .screen-body-item.left {
-      margin-bottom: 30px;
-    }
-  
-    .app-title {
-      flex-direction: row;
-    }
-  
-    .app-title span {
-      margin-right: 12px;
-    }
-  
-    .app-title:after {
-      display: none;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    .screen-body {
-      padding: 40px;
-    }
-  
-    .screen-body-item {
-      padding: 0;
-    }
-  }
-  
+.left-content {
+  flex: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#left-content{
+  opacity: 0;
+}
+
+.contact-title {
+  margin-top: 10px;
+  color: var(--fonts-color);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  font-family: var(--font);
+}
+
+.contact-form {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 20px;
+}
+
+.contact-form-col{
+  margin-top: 40px;
+  padding: 4px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: var(--fonts-color);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.contact-form-name {
+  width: 43%;
+}
+
+.contact-form-phone {
+  margin-left: 4%;
+  width: 43%;
+}
+
+.contact-form-email {
+  width: 90%;
+}
+
+.contact-form-message {
+  width: 90%;
+}
+
+.contact-form-btn {
+  margin-top: 40px;
+  background-color: var(--color1);
+  border-radius: 2px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 700;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  padding: 8px 10px;
+  height: auto;
+  width: 100px;
+}
+
+.contact-form-btn:hover,
+.contact-form-btn:focus {
+  opacity: 0.75;
+}
+
+.right-content {
+  flex: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--color1);
+  margin-bottom: 350px;
+}
+
+.contact-information {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+}
+
+.contact-information-title {
+  margin-top: 40px;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: left;
+  font-family: var(--font);
+}
+
+.contact-information-title-underline {
+  border: 2px solid #7995db;
+  width: 210px;
+  margin-right: 200px;
+  opacity: 0;
+}
+
+.contact-information-item {
+  display: flex;
+  margin-top: 30px;
+}
+
+.contact-information-icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+}
+
+.contact-information-item-text {
+  margin-top: 1.5px;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: left;
+  font-family: var(--font);
+  letter-spacing: 0.6px;
+  margin-left: 2px;
+}

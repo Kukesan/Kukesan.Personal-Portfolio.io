@@ -21,6 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { environment } from "../environments/environment";
+import { IntroComponent } from './intro/intro.component';
+import { NavigateContentComponent } from './navigate-content/navigate-content.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { environment } from "../environments/environment";
     ExperienceComponent,
     ProjectsComponent,
     LandingComponent,
-    SkillsComponent
+    SkillsComponent,
+    IntroComponent,
+    NavigateContentComponent
   ],
   imports: [
     BrowserModule,

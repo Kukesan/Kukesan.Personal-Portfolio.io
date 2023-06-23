@@ -1,49 +1,34 @@
 <div class="container">
-    <div class="side-bar-col">
-        <app-side-bar></app-side-bar>
-    </div>
     <div class="content">
-        <div class="contact-container">
-            <div class="screen">
-                <div class="screen-header">
-                    <div class="screen-header-left">
-                        <div class="screen-header-button close"></div>
-                        <div class="screen-header-button maximize"></div>
-                        <div class="screen-header-button minimize"></div>
-                    </div>
-                    <div class="screen-header-right">
-                        <div class="screen-header-ellipsis"></div>
-                        <div class="screen-header-ellipsis"></div>
-                        <div class="screen-header-ellipsis"></div>
-                    </div>
+        <div class="left-content" id="left-content">
+            <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="addContactDetails()">
+                <p class="contact-title">
+                    Send Us a Message
+                </p>
+                <input type="text" class="contact-form-col contact-form-name" placeholder="Your name" formControlName="name">
+                <input type="text" class="contact-form-col contact-form-phone" placeholder="Your phone" formControlName="contactNo">
+                <input type="email" class="contact-form-col contact-form-email" placeholder="Your email" formControlName="email">
+                <input type="text" class="contact-form-col contact-form-message" placeholder="Message" formControlName="message">
+                <button class="contact-form-btn" type="submit">Send</button>
+            </form>
+        </div>
+        <div class="right-content" id="right-content">
+            <div class="contact-information" id="contact-information">
+                <p class="contact-information-title">
+                    Contact Information
+                </p>
+                <hr class="contact-information-title-underline" id="contact-information-title-underline">
+                <div class="contact-information-item">
+                    <img class="contact-information-icon" src="https://img.icons8.com/ios/50/000000/phone.png" />
+                    <p class="contact-information-item-text">+94 755464760</p>
                 </div>
-                <div class="screen-body">
-                    <div class="screen-body-item left">
-                        <div class="app-title">
-                            <span>CONTACT</span>
-                            <span>US</span>
-                        </div>
-                    </div>
-                    <div class="screen-body-item">
-                        <form class="app-form" [formGroup]="contactForm" (ngSubmit)="addContactDetails()">
-                            <div class="app-form-group">
-                                <input class="app-form-control" placeholder="NAME" formControlName="name">
-                            </div>
-                            <div class="app-form-group">
-                                <input class="app-form-control" placeholder="EMAIL" formControlName="email">
-                            </div>
-                            <div class="app-form-group">
-                                <input class="app-form-control" placeholder="CONTACT NO" formControlName="contactNo">
-                            </div>
-                            <div class="app-form-group message">
-                                <input class="app-form-control" placeholder="MESSAGE" formControlName="message">
-                            </div>
-                            <div class="app-form-group buttons">
-                                <button class="app-form-button">CANCEL</button>
-                                <button class="app-form-button" type="submit">SEND</button>
-                            </div>
-                        </form>
-                    </div>
+                <div class="contact-information-item">
+                    <img class="contact-information-icon" src="https://img.icons8.com/ios/50/000000/new-post.png" />
+                    <p class="contact-information-item-text">kkukesan@gmail.com</p>
+                </div>
+                <div class="contact-information-item">
+                    <img class="contact-information-icon" src="https://img.icons8.com/ios/50/000000/address.png" />
+                    <p class="contact-information-item-text">New Road, Kokuvil west, Jaffna</p>
                 </div>
             </div>
         </div>

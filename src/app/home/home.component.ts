@@ -10,10 +10,12 @@ import { concatMap, delay, map, tap } from "rxjs/operators";
 })
 export class HomeComponent implements OnInit {
 
-  constructor(){
+  constructor(private router : Router){
 
   }
    ngOnInit(): void {
      
    }
+
+   
 }
