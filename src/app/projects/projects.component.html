@@ -1,32 +1,23 @@
-<div class="container">
-    <div class="side-bar-col">
-        <app-side-bar></app-side-bar>
-    </div>
-    <div class="content">
-        <div class="project-container">
+<div class="portfolio-container">
+    <div class="project-container">
+        <div class="head">
+            <!-- <img class="project-icon" src="https://cdn-icons-png.flaticon.com/512/9636/9636421.png"> -->
+            <p class="project-title">Projects</p>
+        </div>
+        <div *ngFor="let project of projects; let i = index" [@projectAnimation]="projectAnimationStates[i]">
             <div class="project-row">
-                <img class="project-row-img" src="../../assets/Images/project.png">
-                <div class="project-row-details">
-                    <p class="project-heading">Bank Secure Vault Door – 1
-                        st Year Hardware Group Project</p>
-                    <p class="project-subject">To design and develop Highly secured Bank vault room door
-                        which can prevent any kind of unauthorized access.
-                    </p>
-                    <p class="project-subject">[ C language, Atmega32, Sensors ]</p>
+                <div class="project-indicator">
+                    <img class="project-row-icon">
+                    <div class="vl"></div>
                 </div>
-            </div>
-            <div class="project-row">
-                <img class="project-row-img" src="../../assets/Images/project.png">
-                <div class="project-row-details">
-                    <p class="project-heading"> Document Management System – 2
-                        nd Year Industry Project</p>
-                    <p class="project-subject">We develop a system for addressing manipulation of
-                        documents for an organization with the use of web application</p>
-                    <p class="project-subject"> Role – Full-Stack Developer
-                        [ system initialization module, Issue Report,
-                        User management and designing of dashboard ]
-                    </p>
-                    <p class="project-subject"> Technologies - .NET Core, Angular, MSSQL</p>
+                <div class="project-row-details" id="project-row-details">
+                    <div class="heading-row">
+                        <p class="project-heading">{{project.name}}</p>
+                        <img *ngIf="project.github != ''" (click)="goGitHub(project.github)" class="github-icon"
+                            src="https://cdn-icons-png.flaticon.com/512/25/25231.png">
+                    </div>
+                    <p class="project-tech">{{project.technologies}}</p>
+                    <p class="project-subject">{{project.description}}</p>
                 </div>
             </div>
         </div>

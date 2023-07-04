@@ -1,36 +1,117 @@
 .project-container {
-    margin-top: 10%;
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.head {
+    display: flex;
+    margin-left: 8%;
+    margin-bottom: 5vh;
+}
+
+.project-icon {
+    width: 50px;
+    height: 50px;
+    filter: invert(20%) sepia(32%) saturate(571%) hue-rotate(183deg) brightness(96%) contrast(87%);
+    flex: 1%;
+}
+
+.project-title {
+    font-size: 32px;
+    font-family: var(--font);
+    font-weight: 600;
+    color: var(--fonts-color);
+    flex: 98%;
+    height: 24px;
 }
 
 .project-row {
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    padding: 2em 2em;
-    margin-top: 1vh;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: white;
 }
 
-.project-row-img {
-    width: 7%;
-    height: 9%;
-    filter: invert(32%) sepia(99%) saturate(916%) hue-rotate(4deg) brightness(96%) contrast(99%);
+.project-indicator {
+    flex: 10%;
+}
+
+.project-row-icon {
+    content: url(https://cdn-icons-png.flaticon.com/128/6885/6885436.png);
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.vl {
+    border-left: 4px solid var(--color1);
+    height: 100%;
+    margin-top: -1vh;
+    margin-left: 47%;
+    z-index: 1;
+}
+
+.project-row-details {
+    flex: 90%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin-bottom: 4vh;
+}
+
+.heading-row {
+    display: flex;
+    height: 40px;
 }
 
 .project-heading {
+    margin-top: 2vh;
     font-size: 20px;
     font-family: 'Helvetica';
     font-weight: 600;
-    margin-left: 3vw;
-    color: #353535;
+    margin-left: 2vw;
+    color: var(--fonts-color);
+    width: 90%;
+}
+
+.github-icon {
+    margin-top: 2vh;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.github-icon:hover {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    transition-duration: 0.5s;
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.project-tech {
+    margin-top: 2vh;
+    font-size: 16px;
+    font-family: 'Helvetica';
+    margin-left: 2vw;
+    color: #012075;
+    height: 10px;
 }
 
 .project-subject {
-    margin-top: 1vh;
     font-size: 15px;
     font-family: 'Helvetica';
-    margin-left: 3vw;
-    color: #353535;
+    margin-left: 2vw;
+    color: var(--fonts-color);
+    margin-top: 4vh;
+    width: 90%;
 }

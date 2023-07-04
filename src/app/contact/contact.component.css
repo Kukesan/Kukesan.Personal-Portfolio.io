@@ -1,10 +1,6 @@
-.container {
-  display: block;
-}
-
-.content {
+.portfolio-container {
   width: 70%;
-  height: 350px;
+  height: 380px;
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -18,17 +14,19 @@
   margin-left: auto;
   margin-right: auto;
 }
-#left-content{
+
+#left-content {
   opacity: 0;
 }
 
 .contact-title {
-  margin-top: 10px;
+  margin-top: 3vh;
   color: var(--fonts-color);
   font-size: 20px;
   font-weight: bold;
   text-align: left;
   font-family: var(--font);
+  height: 10px;
 }
 
 .contact-form {
@@ -38,7 +36,7 @@
   padding: 15px 20px;
 }
 
-.contact-form-col{
+.contact-form-col {
   margin-top: 40px;
   padding: 4px 0;
   background: none;
@@ -48,6 +46,7 @@
   font-size: 14px;
   outline: none;
   transition: border-color 0.2s;
+  height: 25px;
 }
 
 .contact-form-name {
@@ -102,7 +101,7 @@
   margin-left: auto;
   margin-right: auto;
   background-color: var(--color1);
-  margin-bottom: 350px;
+  margin-bottom: 380px;
 }
 
 .contact-information {
@@ -147,4 +146,5 @@
   font-family: var(--font);
   letter-spacing: 0.6px;
   margin-left: 2px;
+  height: 8px;
 }

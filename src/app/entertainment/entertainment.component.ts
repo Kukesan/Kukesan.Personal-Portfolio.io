@@ -1,11 +1,11 @@
 import { Component, HostListener, OnInit, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'app-experience',
-  templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.css']
+  selector: 'app-entertainment',
+  templateUrl: './entertainment.component.html',
+  styleUrls: ['./entertainment.component.css']
 })
-export class ExperienceComponent implements OnInit {
+export class EntertainmentComponent implements OnInit {
 
   constructor(private elementRef: ElementRef) { }
 
@@ -19,17 +19,16 @@ export class ExperienceComponent implements OnInit {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         this.currentScrollElementId = entry.target.id;
-        if (this.currentScrollElementId == 'experience-left') {
-          var experienceLeft = document.getElementById('experience-left') as HTMLElement;
-          var experienceRight = document.getElementById('experience-right') as HTMLElement;
+        if (this.currentScrollElementId == 'entertainment-left') {
+          var entertainmentLeft = document.getElementById('entertainment-left') as HTMLElement;
+          var entertainmentRight = document.getElementById('entertainment-right') as HTMLElement;
 
-          experienceLeft.style.opacity = '1';
-          experienceLeft.style.transitionDuration = '1s';
+          entertainmentLeft.style.opacity = '1';
+          entertainmentLeft.style.transitionDuration = '1s';
 
-          experienceRight.style.opacity = '1';
-          experienceRight.style.transitionDuration = '1s';
-          experienceRight.style.transitionDelay = '0.3s';
-
+          entertainmentRight.style.opacity = '1';
+          entertainmentRight.style.transitionDuration = '1s';
+          entertainmentRight.style.transitionDelay = '0.3s';
         }
       }
     }
@@ -48,4 +47,5 @@ export class ExperienceComponent implements OnInit {
     this.observer = new IntersectionObserver(this.handleIntersection.bind(this), options);
     elements.forEach((element: any) => this.observer.observe(element));
   }
+
 }

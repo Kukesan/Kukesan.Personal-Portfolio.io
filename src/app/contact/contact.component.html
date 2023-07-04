@@ -1,35 +1,37 @@
-<div class="container">
-    <div class="content">
-        <div class="left-content" id="left-content">
-            <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="addContactDetails()">
-                <p class="contact-title">
-                    Send Us a Message
-                </p>
-                <input type="text" class="contact-form-col contact-form-name" placeholder="Your name" formControlName="name">
-                <input type="text" class="contact-form-col contact-form-phone" placeholder="Your phone" formControlName="contactNo">
-                <input type="email" class="contact-form-col contact-form-email" placeholder="Your email" formControlName="email">
-                <input type="text" class="contact-form-col contact-form-message" placeholder="Message" formControlName="message">
-                <button class="contact-form-btn" type="submit">Send</button>
-            </form>
-        </div>
-        <div class="right-content" id="right-content">
-            <div class="contact-information" id="contact-information">
-                <p class="contact-information-title">
-                    Contact Information
-                </p>
-                <hr class="contact-information-title-underline" id="contact-information-title-underline">
-                <div class="contact-information-item">
-                    <img class="contact-information-icon" src="https://img.icons8.com/ios/50/000000/phone.png" />
-                    <p class="contact-information-item-text">+94 755464760</p>
-                </div>
-                <div class="contact-information-item">
-                    <img class="contact-information-icon" src="https://img.icons8.com/ios/50/000000/new-post.png" />
-                    <p class="contact-information-item-text">kkukesan@gmail.com</p>
-                </div>
-                <div class="contact-information-item">
-                    <img class="contact-information-icon" src="https://img.icons8.com/ios/50/000000/address.png" />
-                    <p class="contact-information-item-text">New Road, Kokuvil west, Jaffna</p>
-                </div>
+<div class="portfolio-container" id="contact">
+    <div class="left-content" id="left-content">
+        <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="addContactDetails()">
+            <p class="contact-title">
+                Send me a Message
+            </p>
+            <input type="text" class="contact-form-col contact-form-name" placeholder="Your name"
+                formControlName="name">
+            <input type="text" class="contact-form-col contact-form-phone" placeholder="Your phone"
+                formControlName="contactNo">
+            <input type="email" class="contact-form-col contact-form-email" placeholder="Your email"
+                formControlName="email">
+            <input type="text" class="contact-form-col contact-form-message" placeholder="Message"
+                formControlName="message">
+            <button class="contact-form-btn" type="submit">Send</button>
+        </form>
+    </div>
+    <div class="right-content" id="right-content">
+        <div class="contact-information" id="contact-information">
+            <p class="contact-information-title">
+                Contact Information
+            </p>
+            <hr class="contact-information-title-underline" id="contact-information-title-underline">
+            <div class="contact-information-item">
+                <img class="contact-information-icon" src="https://img.icons8.com/ios/50/000000/phone.png" />
+                <p class="contact-information-item-text">+94 755464760</p>
+            </div>
+            <div class="contact-information-item">
+                <img class="contact-information-icon" src="https://img.icons8.com/ios/50/000000/new-post.png" />
+                <p class="contact-information-item-text">kkukesan@gmail.com</p>
+            </div>
+            <div class="contact-information-item">
+                <img class="contact-information-icon" src="https://img.icons8.com/ios/50/000000/address.png" />
+                <p class="contact-information-item-text">New Road, Kokuvil west, Jaffna</p>
             </div>
         </div>
     </div>

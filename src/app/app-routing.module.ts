@@ -10,19 +10,21 @@ import { LandingComponent } from './landing/landing.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { EntertainmentComponent } from './entertainment/entertainment.component';
 
 const routes: Routes = [
   // {path:'',component:LandingComponent},
-  {path:'',component:HomeComponent},
-  {path:'education',component:EducationComponent},
+  { path: '', component: HomeComponent },
+  { path: 'education', component: EducationComponent },
   // {path:'home',component:HomeComponent},
-  {path:'contact',component:ContactComponent},
-  {path:'info',component:InfoComponent},
-  {path:'experience',component:ExperienceComponent},
-  {path:'projects',component:ProjectsComponent},
-  {path:'achive',component:AchiveComponent},
-  {path:'skills',component:SkillsComponent},
-  {path:'footer',component:FooterComponent}
+  { path: 'contact', component: ContactComponent },
+  { path: 'info', component: InfoComponent },
+  { path: 'experience', component: ExperienceComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'achive', component: AchiveComponent },
+  { path: 'skills', component: SkillsComponent },
+  { path: 'footer', component: FooterComponent },
+  { path: 'entertainment', component: EntertainmentComponent }
 ];
 
 @NgModule({

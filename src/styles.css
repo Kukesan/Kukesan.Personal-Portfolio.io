@@ -1,27 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 * {
-    margin: 0;
-    padding: 0;
-  }
-  html, body {
-    height: 100%;
-    margin: 0;
-    /* background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
-  }
-
-.container {
-    display: flex;
-}
-.side-bar-col{
-    flex: 25%;
-}
-.content{
-    width: 100%;
-    flex: 75%;
+  margin: 0;
+  padding: 0;
 }
 
-:root{
-  --font : Arial, Helvetica, sans-serif;
-  --fonts-color: #36393b;
-  --color1:#353E55;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  /* background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
+}
+
+.portfolio-container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+:root {
+  --font: Arial, Helvetica, sans-serif;
+  --fonts-color: #353535;
+  --color1: #353E55;
 }
