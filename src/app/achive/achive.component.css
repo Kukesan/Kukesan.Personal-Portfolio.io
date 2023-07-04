@@ -1,57 +1,102 @@
-.container {
-    height: 100%;
-    display: flex;
-}
-
-.side-bar-col {
-    flex: 25%;
-}
-
-.content {
-    width: 100%;
-    flex: 75%;
-}
-
 .achive-container {
-    width: 80%;
-    margin-top: 10%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 100%;
+    margin-top: 3vh;
     background-color: white;
     margin-left: auto;
     margin-right: auto;
-    padding: 1em 0;
 }
 
-.achive-container-row{
+.head {
+    margin-bottom: 10vh;
+}
+
+.project-title {
+    font-size: 32px;
+    font-family: var(--font);
+    font-weight: 600;
+    color: var(--fonts-color);
+    height: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+.title-underline {
+    border: 2px solid #7995db;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 3vh;
+}
+
+.achive-row {
     display: flex;
-    padding: 0 1em;
+    margin-top: 2vh;
+
 }
 
-.achive-container-row-img{
-    width: 4%;
-    height: 4%;
+.achive-left {
+    flex: 46%;
+}
+
+.achive-center {
+    flex: 8%;
+    opacity: 0;
+}
+
+.achive-right {
+    flex: 46%;
+}
+
+.achive-row-img {
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    z-index: 2;
+    position: relative;
+}
+
+.vl {
+    display: flex;
+    height: 90%;
+    width: 100%;
+    margin-top: -3vh;
+    z-index: 1;
+}
+
+.vl1 {
+    border-left: 3px solid var(--color1);
+    margin-left: 40%;
+}
+
+.vl2 {
+    border-left: 6px solid var(--color1);
+    margin-left: 3%;
+}
+
+.vl3 {
+    border-left: 3px solid var(--color1);
+    margin-left: 3%;
+}
+
+.achive-container-details {
+    margin-top: 3vh;
     padding: 1em;
-    /* filter:  invert(19%) sepia(37%) saturate(572%) hue-rotate(177deg) brightness(95%) contrast(93%); */
-    filter: invert(32%) sepia(99%) saturate(916%) hue-rotate(4deg) brightness(96%) contrast(99%);
-}
-
-.achive-container-details{
-  padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    opacity: 0;
 }
 
 .achive-heading {
     font-size: 20px;
-    font-family: 'Helvetica';
+    font-family: var(--font);
     font-weight: 600;
-    color:#353535;
+    color: var(--fonts-color);
 }
 
 .achive-subject {
     margin-top: 1vh;
     font-size: 15px;
-    font-family: 'Helvetica';
-    color:#353535;
+    font-family: var(--font);
+    color: var(--fonts-color);
 }
-
-
-

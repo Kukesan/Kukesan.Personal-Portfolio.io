@@ -1,52 +1,32 @@
-.content {
-    display: flex;
+.head {
+    margin-top: 3vh;
+    margin-bottom: 10vh;
 }
 
-.skills-container {
-    padding: 2%;
-    width: 60%;
-    margin-left: 6%;
-    margin-right: auto;
-    margin-top: 5%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: white;
-    height: auto;
-    display: flex;
-}
-
-.skills-col{
-    margin-right: auto;
-    display: block;
-}
-
-.skill-row {
-    padding: 1em;
-}
-
-.skill-heading {
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
+.project-title {
+    font-size: 32px;
+    font-family: var(--font);
     font-weight: 600;
-    color: #353535;
+    color: var(--fonts-color);
+    height: 24px;
+    text-align: center;
+    width: 100%;
 }
 
-.skill-subjects {
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #353535;
-    margin-left: 2vw;
+.title-underline {
+    border: 2px solid #7995db;
+    width: 0;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
-    margin-top: 1vh;
+    margin-top: 3vh;
 }
 
 .link-container {
-    padding: 2%;
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: white; */
-    width: 40%;
+    width: 80%;
+    display: flex;
     margin-left: auto;
-    margin-top: 5%;
-    height: 80%;
+    margin-right: auto;
 }
 
 .link-row {
@@ -55,64 +35,102 @@
 }
 
 .link-card {
-    margin-top: 1%;
-    width: 10%;
-    height: auto;
+    width: 20%;
     flex: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .link-card-photo {
-    width: 30%;
+    width: 40%;
     height: 8vh;
     margin-left: auto;
     margin-right: auto;
     display: block;
+    margin-top: 2vw;
 }
 
 .link-card-heading {
-    font-size: 18px;
+    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     color: #353535;
     text-align: center;
-    padding: 0.5em;
+    padding: 0.8em 0em;
     font-weight: 600;
+    height: 60px;
 }
 
-.link-card-button {
-    background: linear-gradient(to bottom right, #2a3950, #009393);
-    border: 0;
-    border-radius: 12px;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: block;
-    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 2.5;
-    outline: transparent;
-    /* padding: 0 0.5em; */
+.link-card-click {
     text-align: center;
-    text-decoration: none;
-    transition: box-shadow .2s ease-in-out;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    width: 50%;
-    height: 40px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.link-card-button:not([disabled]):focus {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.5), -.125rem -.125rem 0.5rem #2a3950, -.125rem -.125rem 0.5rem #009393;
-}
-
-.link-card-button:not([disabled]):hover {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.5), -.125rem -.125rem 0.5rem #2a3950, .125rem .125rem 0.5rem #009393;
+    background-color: var(--color1);
+    color: white;
+    height: 6vh;
+    padding: 0.6em 0;
+    font-size: 16px;
 }
 
 .verticalLine {
     border-left: 4px solid #202e41;
     padding: 5%;
-  }
+}
+
+.skills-container {
+    width: 80%;
+    margin-top: 5%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-left {
+    flex: 50%;
+}
+
+.skills-right {
+    flex: 50%;
+    margin-top: -8vh;
+}
+
+.skill-card {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
+    margin-bottom: 8vh;
+}
+
+.skill-head {
+    display: flex;
+}
+
+.skill-heading {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: var(--fonts-color);
+    flex: 98%;
+    margin-left: 5px;
+    margin-bottom: 3vh;
+}
+
+.skill-vline {
+    border: 3px solid #7995db;
+    width: 4px;
+    height: 24px;
+    margin-bottom: 1vh;
+    flex: 2%;
+}
+
+.skill-subjects {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--fonts-color);
+    margin-left: 2vw;
+    display: block;
+}
+
+.skill-option {
+    /* height: 10px; */
+    margin-top: -2vh;
+}

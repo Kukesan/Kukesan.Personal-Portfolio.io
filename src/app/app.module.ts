@@ -22,7 +22,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { environment } from "../environments/environment";
 import { IntroComponent } from './intro/intro.component';
-import { NavigateContentComponent } from './navigate-content/navigate-content.component';
+import { OrganizationsComponent } from './experience/organizations/organizations.component';
+import { CompetitionsComponent } from './experience/competitions/competitions.component';
+import { EntertainmentComponent } from './entertainment/entertainment.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { CommentAddComponent } from './reviews/comment-add/comment-add.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -40,7 +46,11 @@ import { NavigateContentComponent } from './navigate-content/navigate-content.co
     LandingComponent,
     SkillsComponent,
     IntroComponent,
-    NavigateContentComponent
+    OrganizationsComponent,
+    CompetitionsComponent,
+    EntertainmentComponent,
+    ReviewsComponent,
+    CommentAddComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +58,8 @@ import { NavigateContentComponent } from './navigate-content/navigate-content.co
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    HttpClientModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { transition, style, animate, trigger } from '@angular/animations';
+import { AppService } from '../app.service';
 
 const enterTransition = transition(':enter', [
   style({
@@ -39,14 +40,14 @@ const fadeOut = trigger('fadeOut', [
 })
 export class IntroComponent implements OnInit {
 
-  show:boolean = false;
+  show: boolean = false;
 
-  constructor(private router : Router) { }
+  constructor(private router: Router, private appService: AppService) { }
 
   ngOnInit(): void {
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     var introImage = document.getElementById('intro-image') as HTMLElement;
     var introTitle = document.getElementById('intro-title') as HTMLElement;
     var introSubTitle = document.getElementById('intro-subtitle') as HTMLElement;
@@ -55,79 +56,101 @@ export class IntroComponent implements OnInit {
     var socialMedia = document.getElementById('social-media') as HTMLElement;
     var contactButton = document.getElementById('contact-button') as HTMLElement;
 
-    var navigatorIconImage1 = document.getElementById('navigator-icon-image1') as HTMLElement; 
-    var navigatorIconImage2 = document.getElementById('navigator-icon-image2') as HTMLElement;  
+    var navigatorIconImage1 = document.getElementById('navigator-icon-image1') as HTMLElement;
+    var navigatorIconImage2 = document.getElementById('navigator-icon-image2') as HTMLElement;
     var navigatorIconImage3 = document.getElementById('navigator-icon-image3') as HTMLElement;
 
     var navigatorIconText1 = document.getElementById('navigator-icon-text1') as HTMLElement;
     var navigatorIconText2 = document.getElementById('navigator-icon-text2') as HTMLElement;
     var navigatorIconText3 = document.getElementById('navigator-icon-text3') as HTMLElement;
 
+    console.log(this.appService.mainPageInitialLoad);
+
+
+
     setTimeout(() => {
-      introImage.style.transitionDuration = '1s';
+      if (!this.appService.mainPageInitialLoad) {
+
+        introImage.style.transitionDuration = '1s';
+
+        introTitle.style.transitionDuration = '1s';
+
+        introSubTitle.style.transitionDuration = '1s';
+        introSubTitle.style.transitionDelay = '0.2s';
+
+        introDescription.style.transitionDuration = '1s';
+        introDescription.style.transitionDelay = '0.4s';
+
+        socialMedia.style.transitionDuration = '1s';
+        socialMedia.style.transitionDelay = '0.6s';
+
+        contactButton.style.transitionDuration = '1s';
+        contactButton.style.transitionDelay = '0.8s';
+
+        navigatorIconImage1.style.transitionDuration = '1s';
+        navigatorIconImage1.style.transitionDelay = '1.4s';
+
+        navigatorIconImage2.style.transitionDuration = '1s';
+        navigatorIconImage2.style.transitionDelay = '1.4s';
+
+        navigatorIconImage3.style.transitionDuration = '1s';
+        navigatorIconImage3.style.transitionDelay = '1.4s';
+
+        navigatorIconText1.style.transitionDuration = '1s';
+        navigatorIconText1.style.transitionDelay = '1.8s';
+
+        navigatorIconText2.style.transitionDuration = '1s';
+        navigatorIconText2.style.transitionDelay = '2s';
+
+        navigatorIconText3.style.transitionDuration = '1s';
+        navigatorIconText3.style.transitionDelay = '2.2s';
+
+        this.appService.mainPageInitialLoad = true;
+      }
       introImage.style.opacity = '1';
 
-      introTitle.style.transitionDuration = '1s';
       introTitle.style.opacity = '1';
-      introTitle.style.transitionDuration = '1s';
       introTitle.style.marginLeft = '0px';
 
-      introSubTitle.style.transitionDuration = '1s';
       introSubTitle.style.opacity = '1';
-      introSubTitle.style.transitionDelay = '0.5s';
-      introSubTitle.style.transitionDuration = '1s';
       introSubTitle.style.marginLeft = '0px';
-
-      introDescription.style.transitionDuration = '1s';
       introDescription.style.opacity = '1';
-      introDescription.style.transitionDelay = '1s';
-      introDescription.style.transitionDuration = '1s';
       introDescription.style.marginLeft = '0px';
-    
-      socialMedia.style.transitionDuration = '1s';
       socialMedia.style.opacity = '1';
-      socialMedia.style.transitionDelay = '1.5s';
-
-      contactButton.style.transitionDuration = '1s';
       contactButton.style.opacity = '1';
-      contactButton.style.transitionDelay = '2s';
-
-      navigatorIconImage1.style.transitionDuration = '1s';
       navigatorIconImage1.style.opacity = '1';
-      navigatorIconImage1.style.transitionDelay = '2.5s';
-      navigatorIconImage1.style.width =  '30%';
-
-      navigatorIconImage2.style.transitionDuration = '1s';
+      navigatorIconImage1.style.width = '30%';
       navigatorIconImage2.style.opacity = '1';
-      navigatorIconImage2.style.transitionDelay = '2.5s';
-      navigatorIconImage2.style.width =  '30%';
-
-      navigatorIconImage3.style.transitionDuration = '1s';
+      navigatorIconImage2.style.width = '30%';
       navigatorIconImage3.style.opacity = '1';
-      navigatorIconImage3.style.transitionDelay = '2.5s';
-      navigatorIconImage3.style.width =  '30%';
-
-      navigatorIconText1.style.transitionDuration = '1s';
+      navigatorIconImage3.style.width = '30%';
       navigatorIconText1.style.opacity = '1';
-      navigatorIconText1.style.transitionDelay = '3s';
       navigatorIconText1.style.marginTop = '8px';
-
-      navigatorIconText2.style.transitionDuration = '1s';
       navigatorIconText2.style.opacity = '1';
-      navigatorIconText2.style.transitionDelay = '3.5s';
       navigatorIconText2.style.marginTop = '8px';
-
-      navigatorIconText3.style.transitionDuration = '1s';
       navigatorIconText3.style.opacity = '1';
-      navigatorIconText3.style.transitionDelay = '4s';
       navigatorIconText3.style.marginTop = '8px';
-    }, 500);
-    
+    }, 5);
+
     setTimeout(() => {
-      
-    }, 500);
+      contactButton.style.transitionDelay = '0s';
+    }, 10);
+
   }
-  goContactUs(){
+  goContactUs() {
     this.router.navigate(['contact']);
+  }
+
+  goProjects() {
+    this.router.navigate(['projects']);
+
+  }
+
+  goAchivements() {
+    this.router.navigate(['achive']);
+  }
+
+  goSkills() {
+    this.router.navigate(['skills']);
   }
 }
