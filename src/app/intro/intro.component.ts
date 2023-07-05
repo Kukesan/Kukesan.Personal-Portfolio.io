@@ -64,12 +64,12 @@ export class IntroComponent implements OnInit {
     var navigatorIconText2 = document.getElementById('navigator-icon-text2') as HTMLElement;
     var navigatorIconText3 = document.getElementById('navigator-icon-text3') as HTMLElement;
 
-    console.log(this.appService.mainPageInitialLoad);
+    console.log(this.appService.introInitialLoad);
 
 
 
     setTimeout(() => {
-      if (!this.appService.mainPageInitialLoad) {
+      if (!this.appService.introInitialLoad) {
 
         introImage.style.transitionDuration = '1s';
 
@@ -105,7 +105,7 @@ export class IntroComponent implements OnInit {
         navigatorIconText3.style.transitionDuration = '1s';
         navigatorIconText3.style.transitionDelay = '2.2s';
 
-        this.appService.mainPageInitialLoad = true;
+        this.appService.introInitialLoad = true;
       }
       introImage.style.opacity = '1';
 

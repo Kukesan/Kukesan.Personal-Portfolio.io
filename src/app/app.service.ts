@@ -6,7 +6,11 @@ import { Injectable } from '@angular/core';
 export class AppService {
 
 
-  mainPageInitialLoad: boolean = false;
+  introInitialLoad: boolean = false;
+  experienceInitialLoad: boolean = false;
+  educationInitialLoad: boolean = false;
+  entertainmentInitialLoad: boolean = false;
+  contactInitialLoad: boolean = false;
   constructor() { }
 
 

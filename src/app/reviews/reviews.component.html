@@ -6,78 +6,15 @@
     </div>
     <hr class="hl">
     <div class="reviews-list">
-        <div class="review">
+        <div class="review" *ngFor="let comment of comments">
             <div class="profile-icon">
                 <img class="profile-icon-img" src="https://cdn-icons-png.flaticon.com/128/3033/3033143.png">
             </div>
             <div class="review-details">
-                <p class="name">Name1</p>
-                <p class="designation">Tech Lead</p>
-                <p class="comment">Today I will show you how to use the HTML U element to add semantic meaning to
-                    your
-                    underlines and CSS to dress them up. You will also learn how to use just CSS to add underlines
-                    to
-                    text and content.</p>
-            </div>
-        </div>
-
-        <div class="review">
-            <div class="profile-icon">
-                <img class="profile-icon-img" src="https://cdn-icons-png.flaticon.com/128/3033/3033143.png">
-            </div>
-            <div class="review-details">
-                <p class="name">Name1</p>
-                <p class="designation">Tech Lead</p>
-                <p class="comment">Today I will show you how to use the HTML U element to add semantic meaning to
-                    your
-                    underlines and CSS to dress them up. You will also learn how to use just CSS to add underlines
-                    to
-                    text and content.</p>
-            </div>
-        </div>
-
-        <div class="review">
-            <div class="profile-icon">
-                <img class="profile-icon-img" src="https://cdn-icons-png.flaticon.com/128/3033/3033143.png">
-            </div>
-            <div class="review-details">
-                <p class="name">Name1</p>
-                <p class="designation">Tech Lead</p>
-                <p class="comment">Today I will show you how to use the HTML U element to add semantic meaning to
-                    your
-                    underlines and CSS to dress them up. You will also learn how to use just CSS to add underlines
-                    to
-                    text and content.</p>
-            </div>
-        </div>
-
-        <div class="review">
-            <div class="profile-icon">
-                <img class="profile-icon-img" src="https://cdn-icons-png.flaticon.com/128/3033/3033143.png">
-            </div>
-            <div class="review-details">
-                <p class="name">Name1</p>
-                <p class="designation">Tech Lead</p>
-                <p class="comment">Today I will show you how to use the HTML U element to add semantic meaning to
-                    your
-                    underlines and CSS to dress them up. You will also learn how to use just CSS to add underlines
-                    to
-                    text and content.</p>
-            </div>
-        </div>
-
-        <div class="review">
-            <div class="profile-icon">
-                <img class="profile-icon-img" src="https://cdn-icons-png.flaticon.com/128/3033/3033143.png">
-            </div>
-            <div class="review-details">
-                <p class="name">Name1</p>
-                <p class="designation">Tech Lead</p>
-                <p class="comment">Today I will show you how to use the HTML U element to add semantic meaning to
-                    your
-                    underlines and CSS to dress them up. You will also learn how to use just CSS to add underlines
-                    to
-                    text and content.</p>
+                <p class="name">{{comment.name}}</p>
+                <p class="designation">{{comment.position}}</p>
+                <p class="comment">{{comment.comment}}.</p>
             </div>
         </div>
     </div>
+</div>
