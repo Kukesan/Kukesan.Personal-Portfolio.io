@@ -1,6 +1,7 @@
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-contact',
@@ -9,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactComponent implements OnInit {
 
-  constructor(private http: HttpClient, private elementRef: ElementRef) { }
+  constructor(private http: HttpClient, private elementRef: ElementRef, private appService: AppService) { }
 
   form: any = {};
 
@@ -28,29 +29,34 @@ export class ContactComponent implements OnInit {
   }
   private handleIntersection(entries: IntersectionObserverEntry[]) {
     entries.forEach(entry => {
+      var leftContent = document.getElementById('left-content') as HTMLElement;
+      var rightContent = document.getElementById('right-content') as HTMLElement;
+
+      var contactInformation = document.getElementById('contact-information') as HTMLElement;
+      var contactInformationTitleUnderline = document.getElementById('contact-information-title-underline') as HTMLElement;
+
       if (entry.isIntersecting) {
         this.currentScrollElementId = entry.target.id;
         if (this.currentScrollElementId == 'contact') {
-          var leftContent = document.getElementById('left-content') as HTMLElement;
-          var rightContent = document.getElementById('right-content') as HTMLElement;
+          if (!this.appService.contactInitialLoad) {
+            leftContent.style.transitionDuration = '1s';
 
-          var contactInformation = document.getElementById('contact-information') as HTMLElement;
-          var contactInformationTitleUnderline = document.getElementById('contact-information-title-underline') as HTMLElement;
+            rightContent.style.transitionDelay = '1s';
+            rightContent.style.transitionDuration = '2s';
 
+            contactInformation.style.transitionDelay = '1s';
+
+            contactInformationTitleUnderline.style.transitionDelay = '5s';
+            contactInformationTitleUnderline.style.transitionDuration = '2s';
+
+            this.appService.contactInitialLoad = true;
+          }
           leftContent.style.opacity = '1';
-          leftContent.style.transitionDuration = '1s';
-
           rightContent.style.marginBottom = '0px';
-          rightContent.style.transitionDelay = '1s';
-          rightContent.style.transitionDuration = '2s';
-
-          contactInformation.style.transitionDelay = '1s';
           contactInformation.style.display = 'block';
-
-          contactInformationTitleUnderline.style.transitionDelay = '5s';
-          contactInformationTitleUnderline.style.transitionDuration = '2s';
           contactInformationTitleUnderline.style.marginRight = '10px';
         }
+
       }
     });
   }

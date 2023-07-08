@@ -2,7 +2,8 @@
     <div class="project-container">
         <div class="head">
             <!-- <img class="project-icon" src="https://cdn-icons-png.flaticon.com/512/9636/9636421.png"> -->
-            <p class="project-title">Projects</p>
+            <p class="project-title">Projects & Works</p>
+            <div class="title-underline" id="title-underline"></div>
         </div>
         <div *ngFor="let project of projects; let i = index" [@projectAnimation]="projectAnimationStates[i]">
             <div class="project-row">

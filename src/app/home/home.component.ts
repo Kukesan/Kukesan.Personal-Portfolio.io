@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit, ElementRef } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import { Component, HostListener, OnInit, ElementRef } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private elementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef, private appService: AppService) { }
 
   currentScrollElementId: string | null = null;
   observer: any = IntersectionObserver;
@@ -17,31 +18,38 @@ export class HomeComponent implements OnInit {
 
   private handleIntersection(entries: IntersectionObserverEntry[]) {
     entries.forEach(entry => {
+      var entertainmentLeft = document.getElementById('entertainment-left') as HTMLElement;
+      var entertainmentRight = document.getElementById('entertainment-right') as HTMLElement;
       if (entry.isIntersecting) {
         this.currentScrollElementId = entry.target.id;
         if (this.currentScrollElementId == 'entertainment-left') {
-          var entertainmentLeft = document.getElementById('entertainment-left') as HTMLElement;
-          var entertainmentRight = document.getElementById('entertainment-right') as HTMLElement;
+          if (!this.appService.entertainmentInitialLoad) {
+            entertainmentLeft.style.transitionDuration = '1s';
 
+            entertainmentRight.style.transitionDuration = '1s';
+            entertainmentRight.style.transitionDelay = '0.3s';
+
+            this.appService.entertainmentInitialLoad = true;
+          }
           entertainmentLeft.style.opacity = '1';
-          entertainmentLeft.style.transitionDuration = '1s';
-
           entertainmentRight.style.opacity = '1';
-          entertainmentRight.style.transitionDuration = '1s';
-          entertainmentRight.style.transitionDelay = '0.3s';
         }
 
+
+        var experienceLeft = document.getElementById('experience-left') as HTMLElement;
+        var experienceRight = document.getElementById('experience-right') as HTMLElement;
+
         if (this.currentScrollElementId == 'experience-left') {
-          var experienceLeft = document.getElementById('experience-left') as HTMLElement;
-          var experienceRight = document.getElementById('experience-right') as HTMLElement;
+          if (!this.appService.experienceInitialLoad) {
+            experienceLeft.style.transitionDuration = '1s';
 
+            experienceRight.style.transitionDuration = '1s';
+            experienceRight.style.transitionDelay = '0.3s';
+
+            this.appService.experienceInitialLoad = true;
+          }
           experienceLeft.style.opacity = '1';
-          experienceLeft.style.transitionDuration = '1s';
-
           experienceRight.style.opacity = '1';
-          experienceRight.style.transitionDuration = '1s';
-          experienceRight.style.transitionDelay = '0.3s';
-
         }
       }
     }

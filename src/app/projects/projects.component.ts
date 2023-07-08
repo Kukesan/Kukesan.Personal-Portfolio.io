@@ -63,6 +63,15 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngAfterViewInit() {
+
+    var titleUnderline = document.getElementById("title-underline") as HTMLElement;
+
+    setTimeout(() => {
+      titleUnderline.style.width = "15%";
+      titleUnderline.style.opacity = "1";
+      titleUnderline.style.transitionDuration = "3s";
+    }, 50);
+
     let j = 0;
     if (this.isInitialLoad) {
       this.animationSubscription = timer(0, 250).subscribe(() => {
