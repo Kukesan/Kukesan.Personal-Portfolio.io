@@ -10,6 +10,7 @@ export class CompetitionsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

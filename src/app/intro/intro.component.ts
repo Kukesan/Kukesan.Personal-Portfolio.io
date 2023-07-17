@@ -143,7 +143,6 @@ export class IntroComponent implements OnInit {
 
   goProjects() {
     this.router.navigate(['projects']);
-
   }
 
   goAchivements() {

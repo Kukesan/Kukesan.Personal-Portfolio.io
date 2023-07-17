@@ -26,10 +26,8 @@ export class ReviewsComponent implements OnInit {
   constructor(private modalService: NgbModal, private http: HttpClient) { }
 
   open() {
-    // setTimeout(() => {
     const modalRef = this.modalService.open(CommentAddComponent);
     modalRef.componentInstance.name = 'World';
-    // }, 500);
   }
 
   ngOnInit(): void {

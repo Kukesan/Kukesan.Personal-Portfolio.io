@@ -30,6 +30,27 @@ import { CommentAddComponent } from './reviews/comment-add/comment-add.component
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { provideFirebaseApp, initializeApp,FirebaseAppModule  } from '@angular/fire/app';
+// import { provideFirebaseApp, FirebaseAppModule } from '@angular/fire/app';
+
+// import { AngularFireModule } from '@angular/fire';
+// import { AngularFireStorageModule } from '@angular/fire/storage';
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC_evFl3ZKT9ob4bpRq8ItnIf9PYgxubN4",
+  authDomain: "portfolio-924c8.firebaseapp.com",
+  databaseURL: "https://portfolio-924c8-default-rtdb.firebaseio.com",
+  projectId: "portfolio-924c8",
+  storageBucket: "portfolio-924c8.appspot.com",
+  messagingSenderId: "863651566343",
+  appId: "1:863651566343:web:9ede221a165ddb6279eba2",
+  measurementId: "G-9L8JSSZM3R"
+};
+
+const app = provideFirebaseApp(() => initializeApp(firebaseConfig));
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,9 +80,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    // AngularFireModule.initializeApp(firebaseConfig),
+    // AngularFireStorageModule,
+    FirebaseAppModule
   ],
-  providers: [],
+  providers: [
+    // app
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

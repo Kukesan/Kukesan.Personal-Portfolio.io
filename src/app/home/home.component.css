@@ -1,3 +1,10 @@
+.portfolio-container1{
+    width: 100%;
+    background-color: #e1e1e1;
+    height: 450px;
+    margin-top: 30vh;
+}
+
 .portfolio-col-2 {
     flex: 50%;
     margin-left: auto;
@@ -64,14 +71,16 @@
 
 .nav-image {
     width: 96%;
-    height: 100%;
+    height: auto;
     display: block;
     border-radius: 2px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
 }
 
 .entertainment-nav-image {
     margin-right: 0;
+    height: 100%;
+    width: 80%;
 }
 
 .experience-nav-image {
@@ -81,9 +90,13 @@
 
 
 .experience {
-    margin-top: 30vh;
+    margin-top: 20px;
     height: 50vh;
     display: flex;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 55px 0;
 }
 
 .experience-subject {
@@ -91,9 +104,15 @@
 }
 
 .entertainment {
-    margin-top: 20vh;
-    height: 50vh;
+    margin-top: 10vh;
+    height: 60vh;
     display: flex;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 55px 0;
+    /* background-size: cover; */
+    /* background-image: url("https://img.freepik.com/free-photo/closeup-dj-working-blue-light_181624-18773.jpg?w=1380&t=st=1688896817~exp=1688897417~hmac=59cb52e0134454c5712af6b15c776b84fefffba745affa115ffe6ac5dfbb069b"); */
 }
 
 .entertainment-subject {

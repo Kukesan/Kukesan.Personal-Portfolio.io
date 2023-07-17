@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit, ElementRef } from '@angular/core';
 import { AppService } from '../app.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { AppService } from '../app.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private elementRef: ElementRef, private appService: AppService) { }
+  constructor(private elementRef: ElementRef, private appService: AppService,private router: Router) { }
 
   currentScrollElementId: string | null = null;
   observer: any = IntersectionObserver;
@@ -67,6 +68,14 @@ export class HomeComponent implements OnInit {
 
     this.observer = new IntersectionObserver(this.handleIntersection.bind(this), options);
     elements.forEach((element: any) => this.observer.observe(element));
+  }
+
+  goExperience() {
+    this.router.navigate(['experience']);
+  }
+
+  goEntertainment() {
+    this.router.navigate(['entertainment']);
   }
 
 }
