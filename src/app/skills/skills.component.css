@@ -1,3 +1,13 @@
+.portfolio-container{
+    width: 100%;
+    display: flex;
+}
+
+.skills{
+    width: 100%;
+    flex:70%;
+}
+
 .head {
     margin-top: 3vh;
     margin-bottom: 10vh;
@@ -133,4 +143,14 @@
 .skill-option {
     /* height: 10px; */
     margin-top: -2vh;
+}
+
+.nav-tag{
+    height: 200px;
+    width: 30px;
+    flex: 15%;
+}
+
+.ad-tag{
+    flex: 15%;
 }

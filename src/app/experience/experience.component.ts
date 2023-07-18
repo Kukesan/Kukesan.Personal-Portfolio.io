@@ -28,18 +28,6 @@ export class ExperienceComponent implements OnInit {
     }, 50);
   }
 
-  scrollToNavigateContact() {
-    this.router.navigate(['/home']).then(() => {
-      this.sharedScrollService.triggerScrollContact();
-    });
-  }
-
-  scrollToNavigateReviews() {
-    this.router.navigate(['/home']).then(() => {
-      this.sharedScrollService.triggerScrollReviews();
-    });
-  }
-
   private handleIntersection(entries: IntersectionObserverEntry[]) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {

@@ -1,37 +1,5 @@
-<div class="side-bar">
-    <img class="side-bar-img"
-        src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg">
-    <div class="side-bar-row">
-        <p class="side-bar-name">
-            Ketheeswaran Kukesan
-        </p>
-    </div>
-    <div class="side-bar-row" routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>
-        <img class="side-bar-row-img" src="https://cdn-icons-png.flaticon.com/512/25/25694.png">
-        <p class="side-bar-text">Contact</p>
-    </div>
-    <div class="side-bar-row" routerLink="/info" routerLinkActive="active">
-        <img class="side-bar-row-img" src="https://cdn-icons-png.flaticon.com/512/7542/7542177.png">
-        <p class="side-bar-text">Personal Info</p>
-    </div>
-    <div class="side-bar-row" routerLink="/education" routerLinkActive="active">
-        <img class="side-bar-row-img" src="https://cdn-icons-png.flaticon.com/512/70/70035.png">
-        <p class="side-bar-text">Education</p>
-    </div>
-    <div class="side-bar-row" routerLink="/achive" routerLinkActive="active">
-        <img class="side-bar-row-img" src="https://cdn-icons-png.flaticon.com/512/9741/9741669.png">
-        <p class="side-bar-text">Awards & Achievements</p>
-    </div>
-    <div class="side-bar-row" routerLink="/projects" routerLinkActive="active">
-        <img class="side-bar-row-img" src="https://cdn-icons-png.flaticon.com/512/9636/9636421.png">
-        <p class="side-bar-text">Projects</p>
-    </div>
-    <div class="side-bar-row" routerLink="/experience" routerLinkActive="active">
-        <img class="side-bar-row-img" src="https://cdn-icons-png.flaticon.com/512/3442/3442327.png">
-        <p class="side-bar-text">Experience</p>
-    </div>
-    <div class="side-bar-row" routerLink="/skills" routerLinkActive="active">
-        <img class="side-bar-row-img" src="https://cdn-icons-png.flaticon.com/512/3442/3442327.png">
-        <p class="side-bar-text">Skills & Abilities</p>
-    </div>
+<div class="nav-options">
+    <i class="fa fa-home" routerLink="/home"></i>
+    <i class="fa fa-phone" (click)="scrollToNavigateContact()"></i>
+    <i class="fa fa-comments" (click)="scrollToNavigateReviews()"></i>
 </div>

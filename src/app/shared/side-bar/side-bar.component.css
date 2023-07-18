@@ -1,54 +1,29 @@
-
-.side-bar{
-    height: 100%;
-    background-color: #202e41;
-    width: 25%;
-    position: fixed;
-    display: block;
-}
-.side-bar-row{
-    padding: 1em 3em;
-    border: none;
-    display: flex;
-}
-
-.side-bar-row-img{
-    width: 25px;
-    margin-right: 1vw;
-    filter: brightness(0) invert(1);
-}
-
-.side-bar-name{
-    font-size: 28px;
-    text-align: center;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.side-bar-text{
-    font-size: 20px;
-    color: white;
-    cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.active{
-    filter: invert(40%) sepia(47%) saturate(1496%) hue-rotate(143deg) brightness(92%) contrast(101%) ;
-}
-
-.side-bar-row:hover{
-    
-}
-
-.side-bar-img{
-    margin-top: 5%;
-    width:180px;
-    height: 180px;
-    border-radius: 50%;
+.nav-options{
     margin-left: auto;
     margin-right: auto;
     display: block;
-    border: 5px solid #6098BA;
+    width: 52px;
+    padding: 10px 0 0 0;
+    background-color: #5c6b90;  
 }
 
+.fa{
+    font-size: 23px;
+    padding: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    color: white;
+}
+
+.fa-home{
+    background-color: #5c6b90;  
+}
+
+.fa-phone{
+    background-color: #475370;
+}
+
+.fa-comments{
+    background-color: #353E55;
+}

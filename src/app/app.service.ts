@@ -11,6 +11,7 @@ export class AppService {
   educationInitialLoad: boolean = false;
   entertainmentInitialLoad: boolean = false;
   contactInitialLoad: boolean = false;
+  homeSkillInitialLoad: boolean = false;
   constructor() { }
 
 

@@ -1,46 +1,53 @@
 <div class="portfolio-container">
-    <div class="head">
-        <p class="project-title">Skills & Abilities</p>
-        <div class="title-underline" id="title-underline"></div>
+    <div class="nav-tag">
+        <app-side-bar></app-side-bar>
     </div>
-    <div class="link-container">
-        <div class="link-card" *ngFor="let link of skillLinks; let i = index"
-            [@skillLinkAnimation]="skillLinkAnimationStates[i]">
-            <img class="link-card-photo" src={{link.icon}}>
-            <div class="link-card-heading">{{link.name}}</div>
-            <div class="link-card-click" (click)="goLink(link.link)">Click Here</div>
+    <div class="skills">
+        <div class="head">
+            <p class="project-title">Skills & Abilities</p>
+            <div class="title-underline" id="title-underline"></div>
         </div>
-    </div>
-    <div class="skills-container">
-        <div class="skills-left">
-            <div class="skill-card" *ngFor="let skill of skills; let i = index"
-                [@skillAnimation]="skillAnimationStates[i]">
-                <div *ngIf="i%2 == 0">
-                    <div class="skill-head">
-                        <div class="skill-vline"></div>
-                        <p class="skill-heading">{{skill.name}}</p>
+        <div class="link-container">
+            <div class="link-card" *ngFor="let link of skillLinks; let i = index"
+                [@skillLinkAnimation]="skillLinkAnimationStates[i]">
+                <img class="link-card-photo" src={{link.icon}}>
+                <div class="link-card-heading">{{link.name}}</div>
+                <div class="link-card-click" (click)="goLink(link.link)">Click Here</div>
+            </div>
+        </div>
+        <div class="skills-container">
+            <div class="skills-left">
+                <div class="skill-card" *ngFor="let skill of skills; let i = index"
+                    [@skillAnimation]="skillAnimationStates[i]">
+                    <div *ngIf="i%2 == 0">
+                        <div class="skill-head">
+                            <div class="skill-vline"></div>
+                            <p class="skill-heading">{{skill.name}}</p>
+                        </div>
+                        <ul class="skill-subjects" id="skill-sub1" *ngFor="let i of skill.options">
+                            <li class="skill-option">{{i}}</li>
+                        </ul>
                     </div>
-                    <ul class="skill-subjects" id="skill-sub1" *ngFor="let i of skill.options">
-                        <li class="skill-option">{{i}}</li>
-                    </ul>
+                </div>
+            </div>
+            <div class="skills-right">
+                <div class="skill-card" *ngFor="let skill of skills; let i = index"
+                    [@skillAnimation]="skillAnimationStates[i]">
+                    <span *ngIf="i%2 == 1">
+                        <div class="skill-head">
+                            <div class="skill-vline"></div>
+                            <p class="skill-heading" id="skill1">{{skill.name}}</p>
+                        </div>
+                        <ul class="skill-subjects" id="skill-sub1" *ngFor="let i of skill.options">
+                            <li class="skill-option">{{i}}</li>
+                        </ul>
+
+                    </span>
                 </div>
             </div>
         </div>
-        <div class="skills-right">
-            <div class="skill-card" *ngFor="let skill of skills; let i = index"
-                [@skillAnimation]="skillAnimationStates[i]">
-                <span *ngIf="i%2 == 1">
-                    <div class="skill-head">
-                        <div class="skill-vline"></div>
-                        <p class="skill-heading" id="skill1">{{skill.name}}</p>
-                    </div>
-                    <ul class="skill-subjects" id="skill-sub1" *ngFor="let i of skill.options">
-                        <li class="skill-option">{{i}}</li>
-                    </ul>
+    </div>
+    <div class="ad-tag">
 
-                </span>
-            </div>
-        </div>
-        <!-- <div class="skill-card" (mouseover)="skillSubjectVisible(1)" (mouseleave)="skillSubjectNotVisible(1)"> -->
     </div>
 </div>

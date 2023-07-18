@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SharedScrollService } from '../shared-scroll.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -8,27 +9,20 @@ import { Router } from '@angular/router';
 })
 export class SideBarComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router: Router, private sharedScrollService: SharedScrollService) { }
 
   ngOnInit(): void {
   }
 
-  // goHome(){
-  //   this.router.navigate(['home']);
-  // }
-  // goInfo(){
-  //   this.router.navigate(['info']);
-  // }
-  // goEducation(){
-  //   this.router.navigate(['education']);
-  // }
-  // goExperience(){
-  //   this.router.navigate(['experience']);
-  // }
-  // goAchive(){
-  //   this.router.navigate(['achive']);
-  // }
-  // goProject(){
-  //   this.router.navigate(['project'])
-  // }
+  scrollToNavigateContact() {
+    this.router.navigate(['/home']).then(() => {
+      this.sharedScrollService.triggerScrollContact();
+    });
+  }
+
+  scrollToNavigateReviews() {
+    this.router.navigate(['/home']).then(() => {
+      this.sharedScrollService.triggerScrollReviews();
+    });
+  }
 }

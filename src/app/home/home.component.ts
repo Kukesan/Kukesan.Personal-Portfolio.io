@@ -1,7 +1,8 @@
-import { Component, HostListener, OnInit, ElementRef} from '@angular/core';
+import { Component, HostListener, OnInit, ElementRef } from '@angular/core';
 import { AppService } from '../app.service';
 import { Router } from '@angular/router';
 import { SharedScrollService } from '../shared/shared-scroll.service';
+import { SkillLink } from '../skills/skills.component';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,15 @@ import { SharedScrollService } from '../shared/shared-scroll.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private elementRef: ElementRef, private appService: AppService,private router: Router,private sharedScrollService: SharedScrollService) {
+  skillLinks: SkillLink[] = [
+    new SkillLink("Git Hub", "https://github.com/Kukesan", "https://live.staticflickr.com/65535/53054599762_6fe632260f_n.jpg"),
+    new SkillLink("Hacker Rank", "https://www.hackerrank.com/K_Kukesan?hr_r=1", "https://live.staticflickr.com/65535/53055189741_4d84135af4_n.jpg"),
+    new SkillLink("Pinterest", "https://www.pinterest.com/K_Kukesan/_saved/", "https://live.staticflickr.com/65535/53055190236_be696ef876.jpg"),
+    new SkillLink("Solo Learn", "https://www.linkedin.com/in/ketheeswaran-kukesan/", "https://live.staticflickr.com/65535/53055190476_127d83f778.jpg"),
+    new SkillLink("Kaggle", "https://www.linkedin.com/in/ketheeswaran-kukesan/", "https://live.staticflickr.com/65535/53055563985_b9db2ae4ef_c.jpg")
+  ]
+
+  constructor(private elementRef: ElementRef, private appService: AppService, private router: Router, private sharedScrollService: SharedScrollService) {
     this.sharedScrollService.scrollTriggerComponent$.subscribe(() => {
       this.scroll('contact-component');
     });
@@ -18,7 +27,7 @@ export class HomeComponent implements OnInit {
     this.sharedScrollService.scrollTriggerReviewsComponent$.subscribe(() => {
       this.scroll('reviews-component');
     });
-   }
+  }
 
   currentScrollElementId: string | null = null;
   observer: any = IntersectionObserver;
@@ -26,8 +35,12 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  scroll(value:any) {
-    const element = document.getElementById(value)as HTMLElement ;
+  goLink(link: string): void {
+    window.open(link, "_blank");
+  }
+
+  scroll(value: any) {
+    const element = document.getElementById(value) as HTMLElement;
 
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -68,6 +81,17 @@ export class HomeComponent implements OnInit {
           }
           experienceLeft.style.opacity = '1';
           experienceRight.style.opacity = '1';
+        }
+
+        var linkCard = document.getElementById('link-container') as HTMLElement;
+        if (this.currentScrollElementId == 'link-container') {
+          if (!this.appService.homeSkillInitialLoad) {
+            linkCard.style.transitionDuration = '2s';
+
+            this.appService.homeSkillInitialLoad = true;
+          }
+          linkCard.style.opacity = '1';
+          linkCard.style.marginTop = '0'
         }
       }
     }

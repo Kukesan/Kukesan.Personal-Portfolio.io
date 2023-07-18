@@ -64,40 +64,9 @@
 .nav-tag{
     height: 200px;
     width: 30px;
-    
     flex: 15%;
 }
 
 .ad-tag{
     flex: 15%;
-}
-
-.nav-options{
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 52px;
-    padding: 10px 0 0 0;
-    background-color: #5c6b90;  
-}
-
-.fa{
-    font-size: 23px;
-    padding: 12px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    color: white;
-}
-
-.fa-home{
-    background-color: #5c6b90;  
-}
-
-.fa-phone{
-    background-color: #475370;
-}
-
-.fa-comments{
-    background-color: #353E55;
 }

@@ -1,8 +1,15 @@
+.portfolio-container{
+    width: 100%;
+    display: flex;
+}
+
 .project-container {
     margin-top: 3vh;
     margin-left: auto;
     margin-right: auto;
     display: block;
+    width: 100%;
+    flex:70%;
 }
 
 .head {
@@ -75,7 +82,7 @@
 .vl {
     border-left: 4px solid var(--color1);
     height: 100%;
-    margin-top: -1vh;
+    /* margin-top: -1vh; */
     margin-left: 47%;
     z-index: 1;
 }
@@ -134,4 +141,14 @@
     color: var(--fonts-color);
     margin-top: 4vh;
     width: 90%;
+}
+
+.nav-tag{
+    height: 200px;
+    width: 30px;
+    flex: 15%;
+}
+
+.ad-tag{
+    flex: 15%;
 }

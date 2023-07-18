@@ -57,7 +57,6 @@ export class ContactComponent implements OnInit {
           if (!this.appService.contactInitialLoad) {
             leftContent.style.transitionDuration = '1s';
 
-            rightContent.style.transitionDelay = '1s';
             rightContent.style.transitionDuration = '2s';
 
             contactInformation.style.transitionDelay = '1s';
