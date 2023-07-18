@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-experience',
@@ -7,12 +8,23 @@ import { Component, HostListener, OnInit, ElementRef } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit {
 
-  constructor(private elementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef,private router: Router) { }
 
   currentScrollElementId: string | null = null;
   observer: any = IntersectionObserver;
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+
+    var titleUnderline = document.getElementById("title-underline") as HTMLElement;
+
+    setTimeout(() => {
+      titleUnderline.style.width = "15%";
+      titleUnderline.style.opacity = "1";
+      titleUnderline.style.transitionDuration = "3s";
+    }, 50);
   }
 
   private handleIntersection(entries: IntersectionObserverEntry[]) {

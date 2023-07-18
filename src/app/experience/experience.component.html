@@ -1,2 +1,15 @@
-<!-- <app-competitions></app-competitions> -->
-<app-organizations></app-organizations>
+<div class="portfolio-container">
+    <div class="experience-container">
+        <div class="head">
+            <p class="project-title">Experience</p>
+            <div class="title-underline" id="title-underline"></div>
+        </div>
+        <div class="experience-categories-row">
+            <p class="category" routerLink="/experience/organizations" routerLinkActive="active">Organizations</p>
+            <p class="category" routerLink="/experience/work" routerLinkActive="active">Work</p>
+            <p class="category" routerLink="/experience/competitions" routerLinkActive="active">Competitions</p>
+        </div>
+        <hr class="hl">
+            <router-outlet></router-outlet>
+    </div>
+</div>

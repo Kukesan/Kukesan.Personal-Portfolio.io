@@ -1,36 +1,8 @@
-<div class="experience-container">
-    <ul>
-        <p class="experience-container-heading">Competitions</p>
-        <li>
-            <p class="experience-heading">Google Hash Code 2021,2022</p>
-            <p class="experience-subject">Organized by Google</p>
-        </li>
-        <li>
-            <p class="experience-heading">Hacktitude 2022</p>
-            <p class="experience-subject">Web Development Competition organized by 99X</p>
-        </li>
-        <li>
-            <p class="experience-heading">MoraSpirit Chess Championship 2022</p>
-            <p class="experience-subject">Organized by Moraspirit in University of Moratuwa</p>
-        </li>
-        <li>
-            <p class="experience-heading">MoraXtreme 2020,2021</p>
-            <p class="experience-subject">Inter University Hackathon Organized by Computer
-                Society of IEEE in University of Moratuwa</p>
-        </li>
-        <li>
-            <p class="experience-heading">BenchMark 2021</p>
-            <p class="experience-subject">UI/UX Design Competition organized by AIESEC in SLIIT</p>
-        </li>
-        <li>
-            <p class="experience-heading">HackMoral 4.0 - 2021</p>
-            <p class="experience-subject">Mini Hackathon Organized by INTECS, Faculty of
-                Information Technology, University of Moratuwa</p>
-        </li>
-        <li>
-            <p class="experience-heading">Decode 1.0</p>
-            <p class="experience-subject">Hackathon Organized by ACM Student Chapter in
-                University of Moratuwa</p>
-        </li>
+<div class="competition-container">
+    <ul class="competition">
+            <li *ngFor="let competition of competitions">            
+                <p class="competition-heading">{{competition.name}}</p>
+                <p class="competition-subject">{{competition.description}}</p>
+            </li>
     </ul>
 </div>

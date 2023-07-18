@@ -11,6 +11,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { EntertainmentComponent } from './entertainment/entertainment.component';
+import { OrganizationsComponent } from './experience/organizations/organizations.component';
+import { CompetitionsComponent } from './experience/competitions/competitions.component';
+import { WorkComponent } from './experience/work/work.component';
 
 const routes: Routes = [
   // {path:'',component:LandingComponent},
@@ -19,12 +22,21 @@ const routes: Routes = [
   // {path:'home',component:HomeComponent},
   { path: 'contact', component: ContactComponent },
   { path: 'info', component: InfoComponent },
-  { path: 'experience', component: ExperienceComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'achive', component: AchiveComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'footer', component: FooterComponent },
-  { path: 'entertainment', component: EntertainmentComponent }
+  { path: 'entertainment', component: EntertainmentComponent },
+
+  {
+    path: 'experience', component: ExperienceComponent, children: [
+      { path: '', redirectTo: 'organizations', pathMatch: 'full' },
+      { path: 'organizations', component: OrganizationsComponent },
+      { path: 'work', component: WorkComponent },
+      { path: 'competitions', component: CompetitionsComponent }
+    ]
+  },
+  { path: '**', redirectTo: 'experience' }
 ];
 
 @NgModule({

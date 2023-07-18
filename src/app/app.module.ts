@@ -31,6 +31,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { provideFirebaseApp, initializeApp,FirebaseAppModule  } from '@angular/fire/app';
+import { WorkComponent } from './experience/work/work.component';
 // import { provideFirebaseApp, FirebaseAppModule } from '@angular/fire/app';
 
 // import { AngularFireModule } from '@angular/fire';
@@ -71,7 +72,8 @@ const app = provideFirebaseApp(() => initializeApp(firebaseConfig));
     CompetitionsComponent,
     EntertainmentComponent,
     ReviewsComponent,
-    CommentAddComponent
+    CommentAddComponent,
+    WorkComponent
   ],
   imports: [
     BrowserModule,

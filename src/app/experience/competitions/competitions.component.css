@@ -1,43 +1,36 @@
-.experience-container {
-    width: 80%;
+.competition-container {
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    padding: 1em 2em;
-    margin-top: 6vh;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: white;
 }
 
-.experience-container-heading{
-    font-size: 20px;
-    font-family: 'Helvetica';
-    font-weight: 600;
-    margin-left: 1vw;
-    color: #b55801;
+.competition{
+    opacity: 0;
+    margin-top: 10px;
 }
 
-.experience-heading {
+.competition-heading {
     font-size: 16px;
-    font-family: 'Helvetica';
+    font-family: var(--font);
     font-weight: 600;
     margin-left: 2vw;
-    color:#353535;
+    color:var(--font-color);
+    height: 12px;
 }
 
-.experience-subject {
+.competition-subject {
     margin-top: 1vh;
     font-size: 14px;
-    font-family: 'Helvetica';
+    font-family: var(--font);
     margin-left: 2vw;
-    color:#353535;
+    color:var(--font-color);
 }
 
 ul li {
     list-style: none;
     position: relative;
-    padding: 3px 5px;
-    margin: 2%;
+    margin: 4%;
 }
 
 ul li::before {

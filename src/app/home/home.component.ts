@@ -71,6 +71,7 @@ export class HomeComponent implements OnInit {
   }
 
   goExperience() {
+    // this.router.navigate(['organizations']);
     this.router.navigate(['experience']);
   }
 
