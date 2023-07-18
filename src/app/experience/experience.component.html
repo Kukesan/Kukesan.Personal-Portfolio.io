@@ -1,4 +1,11 @@
 <div class="portfolio-container">
+    <div class="nav-tag">
+        <div class="nav-options">
+            <i class="fa fa-home" routerLink="/home"></i>
+            <i class="fa fa-phone" (click)="scrollToNavigateContact()"></i>
+            <i class="fa fa-comments" (click)="scrollToNavigateReviews()"></i> 
+        </div>
+    </div>
     <div class="experience-container">
         <div class="head">
             <p class="project-title">Experience</p>
@@ -11,5 +18,8 @@
         </div>
         <hr class="hl">
             <router-outlet></router-outlet>
+    </div>
+    <div class="ad-tag">
+
     </div>
 </div>

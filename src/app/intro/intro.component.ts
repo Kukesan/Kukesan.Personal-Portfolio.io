@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { transition, style, animate, trigger } from '@angular/animations';
 import { AppService } from '../app.service';
+import { ContactComponent } from '../contact/contact.component';
+import { SharedScrollService } from '../shared/shared-scroll.service';
 
 const enterTransition = transition(':enter', [
   style({
@@ -42,7 +44,7 @@ export class IntroComponent implements OnInit {
 
   show: boolean = false;
 
-  constructor(private router: Router, private appService: AppService) { }
+  constructor(private router: Router, private appService: AppService,private sharedScrollService: SharedScrollService) { }
 
   ngOnInit(): void {
   }
@@ -137,8 +139,9 @@ export class IntroComponent implements OnInit {
     }, 10);
 
   }
-  goContactUs() {
-    this.router.navigate(['contact']);
+
+  scrollToNavigateSection() {
+    this.sharedScrollService.triggerScroll();
   }
 
   goProjects() {

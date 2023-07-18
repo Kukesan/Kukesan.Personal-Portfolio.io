@@ -2,6 +2,8 @@ import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { AppService } from '../app.service';
+import { SharedScrollService } from '../shared/shared-scroll.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-contact',
@@ -10,7 +12,11 @@ import { AppService } from '../app.service';
 })
 export class ContactComponent implements OnInit {
 
-  constructor(private http: HttpClient, private elementRef: ElementRef, private appService: AppService) { }
+  constructor(private http: HttpClient, private elementRef: ElementRef, private appService: AppService,private sharedScrollService: SharedScrollService) {
+    this.sharedScrollService.scrollTrigger$.subscribe(() => {
+      this.scroll();
+    });
+   }
 
   form: any = {};
 
@@ -26,7 +32,17 @@ export class ContactComponent implements OnInit {
   });
 
   ngOnInit(): void {
+    
   }
+
+  scroll() {
+    const element = document.getElementById('contact')as HTMLElement ;
+
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   private handleIntersection(entries: IntersectionObserverEntry[]) {
     entries.forEach(entry => {
       var leftContent = document.getElementById('left-content') as HTMLElement;

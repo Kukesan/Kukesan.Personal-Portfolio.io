@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { SharedScrollService } from '../shared/shared-scroll.service';
 
 @Component({
   selector: 'app-experience',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ExperienceComponent implements OnInit {
 
-  constructor(private elementRef: ElementRef,private router: Router) { }
+  constructor(private elementRef: ElementRef,private router: Router,private sharedScrollService: SharedScrollService) { }
 
   currentScrollElementId: string | null = null;
   observer: any = IntersectionObserver;
@@ -25,6 +26,18 @@ export class ExperienceComponent implements OnInit {
       titleUnderline.style.opacity = "1";
       titleUnderline.style.transitionDuration = "3s";
     }, 50);
+  }
+
+  scrollToNavigateContact() {
+    this.router.navigate(['/home']).then(() => {
+      this.sharedScrollService.triggerScrollContact();
+    });
+  }
+
+  scrollToNavigateReviews() {
+    this.router.navigate(['/home']).then(() => {
+      this.sharedScrollService.triggerScrollReviews();
+    });
   }
 
   private handleIntersection(entries: IntersectionObserverEntry[]) {

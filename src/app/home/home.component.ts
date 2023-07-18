@@ -1,6 +1,7 @@
-import { Component, HostListener, OnInit, ElementRef } from '@angular/core';
+import { Component, HostListener, OnInit, ElementRef} from '@angular/core';
 import { AppService } from '../app.service';
 import { Router } from '@angular/router';
+import { SharedScrollService } from '../shared/shared-scroll.service';
 
 @Component({
   selector: 'app-home',
@@ -9,12 +10,28 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private elementRef: ElementRef, private appService: AppService,private router: Router) { }
+  constructor(private elementRef: ElementRef, private appService: AppService,private router: Router,private sharedScrollService: SharedScrollService) {
+    this.sharedScrollService.scrollTriggerComponent$.subscribe(() => {
+      this.scroll('contact-component');
+    });
+
+    this.sharedScrollService.scrollTriggerReviewsComponent$.subscribe(() => {
+      this.scroll('reviews-component');
+    });
+   }
 
   currentScrollElementId: string | null = null;
   observer: any = IntersectionObserver;
 
   ngOnInit() {
+  }
+
+  scroll(value:any) {
+    const element = document.getElementById(value)as HTMLElement ;
+
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
   private handleIntersection(entries: IntersectionObserverEntry[]) {
@@ -71,7 +88,6 @@ export class HomeComponent implements OnInit {
   }
 
   goExperience() {
-    // this.router.navigate(['organizations']);
     this.router.navigate(['experience']);
   }
 
