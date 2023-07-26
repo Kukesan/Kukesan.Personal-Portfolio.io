@@ -1,24 +1,21 @@
-<div class="content entertainment">
-    <div class="entertainment-left" id="entertainment-left">
-        <img src="https://www.popoptiq.com/wp-content/uploads/2019/01/1-26-1-870x653.jpg.webp" alt="1"
-            class="entertainment-image" />
+<div class="portfolio-container">
+    <div class="nav-tag">
+        <app-side-bar></app-side-bar>
     </div>
-    <div class="entertainment-right" id="entertainment-right">
-        <div class="entertainment-right-content">
-            <div class="entertainment-title">
-                Entertainments
-            </div>
-            <div class="entertainment-subtitle">
-                Some of my projects
-            </div>
-            <div class="entertainment-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget elementum aliquam,
-                odio nibh aliquet nunc, vitae aliquam nisl nunc eu nisl. Donec euismod, nisl eget elementum aliquam,
-                odio nibh aliquet nunc, vitae aliquam nisl nunc eu nisl.
-            </div>
-            <button class="content-seemore-button">
-                View Projects
-            </button>
+    <div class="experience-container">
+        <div class="head">
+            <p class="project-title">Entertainment</p>
+            <div class="title-underline" id="title-underline"></div>
         </div>
+        <div class="experience-categories-row">
+            <p class="category" routerLink="/entertainment/photography" routerLinkActive="active">Photography</p>
+            <p class="category" routerLink="/entertainment/photoshop" routerLinkActive="active">Photoshop</p>
+            <!-- <p class="category" routerLink="/entertainment/pencil-art" routerLinkActive="active">Pencil Art</p> -->
+        </div>
+        <hr class="hl">
+            <router-outlet></router-outlet>
+    </div>
+    <div class="ad-tag">
+
     </div>
 </div>

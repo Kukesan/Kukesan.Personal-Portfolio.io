@@ -1,19 +1,43 @@
 .info {
-    margin-top: 8vh;
     display: flex;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.portfolio-container {
+    width: 100%;
+    margin-top: 0;
+}
+
+.info-container {
+    background-color: var(--color1);
+    height: 100vh;
 }
 
 .info-left {
-    flex: 50%;
+    flex: 40%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 18vh;
+}
+
+.welcome-text {
+    color: #89c4f4;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 7%;
+    font-family: var(--font);
 }
 
 .intro-image {
-    width: 86%;
-    height: 100%;
+    width: 90%;
+    /* height: 100%; */
     margin-left: 7%;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /* background-color: white; */
+    border-radius: 8px;
 }
 
 #intro-image {
@@ -21,14 +45,23 @@
 }
 
 .info-right {
-    flex: 50%;
+    flex: 60%;
     margin-left: auto;
     margin-right: auto;
     padding: 15px 20px;
+    margin-top: 8vh;
+}
+
+.intro-welcome {
+    color: #89c4f4;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: var(--font);
+    margin-top: 12vh;
 }
 
 .intro-title {
-    color: var(--fonts-color);
+    color: white;
     font-size: 40px;
     font-weight: bold;
     text-align: left;
@@ -41,7 +74,7 @@
 }
 
 .intro-subtitle {
-    color: var(--fonts-color);
+    color: white;
     font-size: 25px;
     font-weight: bold;
     text-align: left;
@@ -55,11 +88,11 @@
 }
 
 .intro-description {
-    color: var(--fonts-color);
+    color: white;
     font-size: 16px;
     text-align: left;
     margin-top: 20px;
-    width: 90%;
+    width: 100%;
     font-family: var(--font);
     line-height: 1.6;
 }
@@ -86,10 +119,10 @@
     margin-top: 20px;
     appearance: none;
     background-color: transparent;
-    border: 2px solid var(--fonts-color);
+    border: 2px solid white;
     border-radius: 3px;
     box-sizing: border-box;
-    color: var(--fonts-color);
+    color: white;
     cursor: pointer;
     display: inline-block;
     font-family: var(--font);
@@ -115,8 +148,8 @@
 }
 
 .contact-button:hover {
-    color: #fff;
-    background-color: var(--color1);
+    color: var(--color1);
+    background-color: white;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
     border: 2px solid var(--color1);
@@ -129,12 +162,50 @@
 
 .navigate {
     margin-top: 14vh;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+
+.project-title {
+    font-size: 32px;
+    font-family: var(--font);
+    font-weight: 600;
+    color: var(--fonts-color);
+    height: 24px;
+    text-align: center;
+    width: 100%;
+
+}
+
+.navigate-row {
     display: flex;
+    margin-top: 8vh;
+
 }
 
 .navigator-icon {
-    flex: 23%;
+    flex: 20%;
     height: 80px;
+    /* background-color: white; */
+    height: auto;
+
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+}
+
+.navigate-details {
+    width: 80%;
+    background-color: #89c4f4;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 30px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 100%;
+    border-radius: 3px;
+    /* border: 1px solid black; */
 }
 
 .navigator-icon-image {
@@ -143,24 +214,35 @@
     display: block;
     width: 30%;
     height: auto;
-    /* filter: invert(31%) sepia(2%) saturate(2525%) hue-rotate(314deg) brightness(92%) contrast(86%); */
+
+    /* filter: brightness(0) invert(1); */
     filter: invert(20%) sepia(9%) saturate(2208%) hue-rotate(186deg) brightness(96%) contrast(85%) drop-shadow(2px 3px 2px #787777);
 }
 
 .navigator-icon:hover {
     transition-duration: 0.5s;
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .navigator-icon-text {
-    color: var(--fonts-color);
+    color: var(--font-color);
     font-size: 20px;
     font-weight: bold;
     text-align: center;
     margin-top: 10px;
     font-family: var(--font);
+}
+
+.navigator-icon-subject {
+    color: var(--font-color);
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    font-family: var(--font);
+    /* width: 80%; */
 }
 
 #navigator-icon-image1 {

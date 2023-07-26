@@ -1,67 +1,91 @@
-<div class="portfolio-container info">
-    <div class="info-left">
-        <img src="https://img.freepik.com/premium-photo/young-handsome-blonde-man-isolated-white-background-pointing-front-with-happy-expression_1368-428012.jpg"
-            alt="1" class="intro-image" id="intro-image" />
-    </div>
-    <div class="info-right">
-        <div class="intro-title" id="intro-title">
-            Ketheeswaran Kukesan
+<div class="portfolio-container">
+    <div class="info-container">
+        <div class="info">
+            <div class="info-left">
+                <!-- <p class="welcome-text">Welcome to My Site</p> -->
+                <!-- <img src="https://img.freepik.com/premium-photo/young-handsome-blonde-man-isolated-white-background-pointing-front-with-happy-expression_1368-428012.jpg" -->
+                <img src="../../assets/Untitled-2.png" alt="1" class="intro-image" id="intro-image" />
+            </div>
+            <div class="info-right">
+                <div class="intro-welcome">Hello, I'm</div>
+                <div class="intro-title" id="intro-title">
+                    Ketheeswaran Kukesan
+                </div>
+                <div class="intro-subtitle" id="intro-subtitle">
+                    Software Engineer
+                </div>
+                <div class="intro-description" id="intro-description">
+                    As an IT enthusiast, I am deeply passionate about the boundless possibilities of technology to
+                    reshape
+                    the world. With a focus on Software Engineering and AI, I am committed to perpetual learning and
+                    honing
+                    my problem-solving skills.
+                </div>
+                <div id="social-media">
+                    <!-- <a href="https://www.linkedin.com/in/ketheeswaran-kukesan-0b1b0a1a0/" target="_blank">
+                        <img class="social-media-icon"
+                            src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_color-512.png"
+                            alt="1" />
+                    </a>
+                    <a href="https://www.facebook.com/ketheeswaran.kukesan/" target="_blank">
+                        <img class="social-media-icon"
+                            src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-512.png"
+                            alt="1" />
+                    </a>
+                    <a href="https://www.instagram.com/kukesan/" target="_blank">
+                        <img class="social-media-icon"
+                            src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/instagram_circle_color-512.png"
+                            alt="1" />
+                    </a>
+                    <a href="https://www.github.com/kukesan" target="_blank">
+                        <img class="social-media-icon"
+                            src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_circle_color-512.png"
+                            alt="1" />
+                    </a> -->
+                </div>
+                <div>
+                    <button class="contact-button" id="contact-button" (click)="scrollToNavigateSection()">
+                        CONTACT ME
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="intro-subtitle" id="intro-subtitle">
-            Software Engineer
-        </div>
-        <div class="intro-description" id="intro-description">
-            As an IT enthusiast, I am deeply passionate about the boundless possibilities of technology to reshape the world. With a focus on Software Engineering and AI, I am committed to perpetual learning and honing my problem-solving skills.
-          </div>
-        <div id="social-media">
-            <a href="https://www.linkedin.com/in/ketheeswaran-kukesan-0b1b0a1a0/" target="_blank">
-                <img class="social-media-icon"
-                    src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_color-512.png"
-                    alt="1" />
-            </a>
-            <a href="https://www.facebook.com/ketheeswaran.kukesan/" target="_blank">
-                <img class="social-media-icon"
-                    src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-512.png"
-                    alt="1" />
-            </a>
-            <a href="https://www.instagram.com/kukesan/" target="_blank">
-                <img class="social-media-icon"
-                    src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/instagram_circle_color-512.png"
-                    alt="1" />
-            </a>
-            <a href="https://www.github.com/kukesan" target="_blank">
-                <img class="social-media-icon"
-                    src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_circle_color-512.png"
-                    alt="1" />
-            </a>
-        </div>
-        <div>
-            <button class="contact-button" id="contact-button" (click)="scrollToNavigateSection()">
-                CONTACT ME
-            </button>
-        </div>
     </div>
-</div>
-<div class="portfolio-container navigate">
-    <div class="navigator-icon" (click)="goProjects()">
-        <a>
-            <img id="navigator-icon-image1" class="navigator-icon-image"
-                src="https://cdn-icons-png.flaticon.com/512/9636/9636421.png" alt="1" />
-        </a>
-        <div id="navigator-icon-text1" class="navigator-icon-text">Projects & Works</div>
-    </div>
-    <div class="navigator-icon" (click)="goAchivements()">
-        <a>
-            <img id="navigator-icon-image2" class="navigator-icon-image"
-                src="https://cdn-icons-png.flaticon.com/512/9741/9741669.png" alt="1" />
-        </a>
-        <div id="navigator-icon-text2" class="navigator-icon-text">Achievements</div>
-    </div>
-    <div class="navigator-icon" (click)="goSkills()">
-        <a>
-            <img id="navigator-icon-image3" class="navigator-icon-image"
-                src="https://cdn-icons-png.flaticon.com/512/3442/3442327.png" alt="1" />
-        </a>
-        <div id="navigator-icon-text3" class="navigator-icon-text">Skills & Abilities</div>
+    <div class="navigate">
+        <!-- <p class="project-title">Accomplishments & Expertise</p> -->
+        <div class="navigate-row">
+            <div class="navigator-icon" (click)="goProjects()">
+                <div class="navigate-details">
+                    <a>
+                        <img id="navigator-icon-image1" class="navigator-icon-image"
+                            src="https://cdn-icons-png.flaticon.com/512/9636/9636421.png" alt="1" />
+                    </a>
+                    <p id="navigator-icon-text1" class="navigator-icon-text">Projects & Works</p>
+                    <p class="navigator-icon-subject">I included links to my website and GitHub for my projects and
+                        works.</p>
+                </div>
+            </div>
+            <div class="navigator-icon" (click)="goAchivements()">
+                <div class="navigate-details">
+                    <a>
+                        <img id="navigator-icon-image2" class="navigator-icon-image"
+                            src="https://cdn-icons-png.flaticon.com/512/9741/9741669.png" alt="1" />
+                    </a>
+                    <p id="navigator-icon-text2" class="navigator-icon-text">Achievements</p>
+                    <p class="navigator-icon-subject">I've achieved several solo and group accomplishments.</p>
+                </div>
+            </div>
+            <div class="navigator-icon" (click)="goSkills()">
+                <div class="navigate-details">
+                    <a>
+                        <img id="navigator-icon-image3" class="navigator-icon-image"
+                            src="https://cdn-icons-png.flaticon.com/512/3442/3442327.png" alt="1" />
+                    </a>
+                    <p id="navigator-icon-text3" class="navigator-icon-text">Skills & Abilities</p>
+                    <p class="navigator-icon-subject">You can view knowledge concerning my skills and some learning
+                        platform performance.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

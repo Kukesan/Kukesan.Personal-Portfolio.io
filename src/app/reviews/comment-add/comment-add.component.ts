@@ -3,6 +3,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 // import { AngularFireStorage } from '@angular/fire/storage';
+// import firebase from 'firebase/app'; // Import Firebase
+import 'firebase/storage'; // Import Firebase Storage
 
 
 @Component({

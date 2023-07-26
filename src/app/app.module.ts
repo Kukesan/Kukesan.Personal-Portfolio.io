@@ -32,6 +32,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { provideFirebaseApp, initializeApp,FirebaseAppModule  } from '@angular/fire/app';
 import { WorkComponent } from './experience/work/work.component';
+import { PhotoshopComponent } from './entertainment/photoshop/photoshop.component';
+import { PencilArtComponent } from './entertainment/pencil-art/pencil-art.component';
+import { PhotographyComponent } from './entertainment/photography/photography.component';
 // import { provideFirebaseApp, FirebaseAppModule } from '@angular/fire/app';
 
 // import { AngularFireModule } from '@angular/fire';
@@ -73,7 +76,10 @@ const app = provideFirebaseApp(() => initializeApp(firebaseConfig));
     EntertainmentComponent,
     ReviewsComponent,
     CommentAddComponent,
-    WorkComponent
+    WorkComponent,
+    PhotoshopComponent,
+    PencilArtComponent,
+    PhotographyComponent
   ],
   imports: [
     BrowserModule,

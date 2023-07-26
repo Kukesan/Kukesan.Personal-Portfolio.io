@@ -4,6 +4,7 @@ import { transition, style, animate, trigger } from '@angular/animations';
 import { AppService } from '../app.service';
 import { ContactComponent } from '../contact/contact.component';
 import { SharedScrollService } from '../shared/shared-scroll.service';
+import { timer } from 'rxjs';
 
 const enterTransition = transition(':enter', [
   style({
@@ -44,9 +45,19 @@ export class IntroComponent implements OnInit {
 
   show: boolean = false;
 
+  myName: string = "Ketheeswaran Kukesan";
+  displayName: string = '';
+
+  i:number=0;
+
   constructor(private router: Router, private appService: AppService,private sharedScrollService: SharedScrollService) { }
 
   ngOnInit(): void {
+    // let timer$ = timer(100,150);
+    // timer$.subscribe((d)=>{
+    //     this.displayName=this.displayName+ this.myName.charAt(this.i);
+    //     this.i++;
+    // })
   }
 
   ngAfterViewInit() {

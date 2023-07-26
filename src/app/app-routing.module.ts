@@ -14,20 +14,21 @@ import { EntertainmentComponent } from './entertainment/entertainment.component'
 import { OrganizationsComponent } from './experience/organizations/organizations.component';
 import { CompetitionsComponent } from './experience/competitions/competitions.component';
 import { WorkComponent } from './experience/work/work.component';
+import { PhotographyComponent } from './entertainment/photography/photography.component';
+import { PencilArtComponent } from './entertainment/pencil-art/pencil-art.component';
+import { PhotoshopComponent } from './entertainment/photoshop/photoshop.component';
 
 const routes: Routes = [
   // {path:'',component:LandingComponent},
   { path: '', component: HomeComponent },
   { path: 'education', component: EducationComponent },
-  {path:'home',component:HomeComponent},
+  { path: 'home', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'info', component: InfoComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'achive', component: AchiveComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'footer', component: FooterComponent },
-  { path: 'entertainment', component: EntertainmentComponent },
-
   {
     path: 'experience', component: ExperienceComponent, children: [
       { path: '', redirectTo: 'organizations', pathMatch: 'full' },
@@ -36,7 +37,14 @@ const routes: Routes = [
       { path: 'competitions', component: CompetitionsComponent }
     ]
   },
-  { path: '**', redirectTo: 'experience' }
+  {
+    path: 'entertainment', component: EntertainmentComponent, children: [
+      { path: '', redirectTo: 'photography', pathMatch: 'full' },
+      { path: 'photography', component: PhotographyComponent },
+      { path: 'pencil-art', component: PencilArtComponent },
+      { path: 'photoshop', component: PhotoshopComponent }
+    ]
+  }
 ];
 
 @NgModule({
