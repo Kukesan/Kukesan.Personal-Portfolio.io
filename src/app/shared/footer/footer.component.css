@@ -1,5 +1,5 @@
 .footer-content{
-    width: fill;
+    width: stretch;
     background-color: #36393b;
     color: #fff;
     font-family: var(--font);
@@ -13,3 +13,14 @@
     text-align: center;
     font-size: 14px;
 }
+
+/* #social-media {
+    opacity: 0;
+}
+
+.social-media-icon {
+    margin-top: 20px;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+} */

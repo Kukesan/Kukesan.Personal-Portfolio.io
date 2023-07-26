@@ -1,6 +1,5 @@
 .portfolio-container1{
     width: 100%;
-    /* background-color: #e1e1e1; */
     background-color: var(--color1);
     height: 450px;
     margin-top: 30vh;
@@ -24,15 +23,6 @@
     font-size: 32px;
     font-weight: bold;
     text-align: left;
-    font-family: var(--font);
-}
-
-.nav-subtitle {
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
-    text-align: left;
-    margin-top: 10px;
     font-family: var(--font);
 }
 
@@ -71,15 +61,14 @@
   border: 0;
   border-radius: 2px;
   box-sizing: border-box;
-  color: #111827;
-  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  color: var(--fonts-color);
+  font-family: var(--font);
   font-size: .875rem;
   font-weight: 600;
   line-height: 1.25rem;
   padding: .75rem 1rem;
   text-align: center;
   text-decoration: none #D1D5DB solid;
-  text-decoration-thickness: auto;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   cursor: pointer;
   user-select: none;
@@ -105,16 +94,13 @@
 
 .content-seemore-button {
     margin-top: 20px;
-    /* background-image: linear-gradient(-180deg, #89c4f4 0%, #5e84a3 100%); */
     background-color:#89c4f4 ;
     border-radius: 3px;
     box-sizing: border-box;
-    /* color: var(--fonts-color); */
     color: #FFFFFF;
     display: flex;
     font-size: 16px;
     justify-content: center;
-    /* font-weight: bold; */
     padding: .4rem 1rem;
     text-decoration: none;
     width: 32%;
@@ -190,9 +176,7 @@
 
 .portfolio-container3{
     width: 100%;
-    /* background-color: #e1e1e1; */
     background-color: var(--color1);
-    /* height: 400px; */
     margin-top: 20vh;
     padding: 30px 0;
 }
@@ -210,7 +194,6 @@
     font-size: 32px;
     font-family: var(--font);
     font-weight: 600;
-    /* color: var(--fonts-color); */
     color:white;
     height: 24px;
     text-align: center;
@@ -237,18 +220,14 @@
 
 .link-row {
     display: flex;
-    /* margin-top: 4%; */
 }
 
 .link-card {
     width: 18%;
     flex: auto;
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
     box-shadow: rgba(210, 210, 225, 0.25) 0px 2px 5px -1px, rgba(206, 194, 194, 0.3) 0px 1px 3px -1px;
     margin-left: 15px;
     margin-right: 15px;
-    /* background-color: white; */
-    /* background-color:#89c4f4 ; */
     margin-bottom: 20px;
     border-radius: 3px;
     border: 1px solid white;
@@ -275,8 +254,7 @@
 
 .link-card-heading {
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    /* color: #353535; */
+    font-family: var(--font);
     color: #FFFFFF;
     text-align: center;
     padding: 0.8em 0em;
@@ -287,7 +265,6 @@
 
 .link-card-click {
     text-align: center;
-    /* background-color: var(--color1); */
     color: var(--fonts-color);
     font-family: var(--font);
     height: 6vh;
@@ -302,5 +279,4 @@
     z-index: 1;
     border-radius: 3px;
     opacity: 0;
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 }

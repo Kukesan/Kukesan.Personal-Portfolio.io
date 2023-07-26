@@ -1,10 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { transition, style, animate, trigger } from '@angular/animations';
 import { AppService } from '../app.service';
-import { ContactComponent } from '../contact/contact.component';
 import { SharedScrollService } from '../shared/shared-scroll.service';
-import { timer } from 'rxjs';
 
 const enterTransition = transition(':enter', [
   style({
@@ -45,19 +43,9 @@ export class IntroComponent implements OnInit {
 
   show: boolean = false;
 
-  myName: string = "Ketheeswaran Kukesan";
-  displayName: string = '';
-
-  i:number=0;
-
   constructor(private router: Router, private appService: AppService,private sharedScrollService: SharedScrollService) { }
 
   ngOnInit(): void {
-    // let timer$ = timer(100,150);
-    // timer$.subscribe((d)=>{
-    //     this.displayName=this.displayName+ this.myName.charAt(this.i);
-    //     this.i++;
-    // })
   }
 
   ngAfterViewInit() {
@@ -66,7 +54,6 @@ export class IntroComponent implements OnInit {
     var introSubTitle = document.getElementById('intro-subtitle') as HTMLElement;
     var introDescription = document.getElementById('intro-description') as HTMLElement;
 
-    var socialMedia = document.getElementById('social-media') as HTMLElement;
     var contactButton = document.getElementById('contact-button') as HTMLElement;
 
     var navigatorIconImage1 = document.getElementById('navigator-icon-image1') as HTMLElement;
@@ -93,9 +80,6 @@ export class IntroComponent implements OnInit {
 
         introDescription.style.transitionDuration = '1s';
         introDescription.style.transitionDelay = '0.4s';
-
-        socialMedia.style.transitionDuration = '1s';
-        socialMedia.style.transitionDelay = '0.6s';
 
         contactButton.style.transitionDuration = '1s';
         contactButton.style.transitionDelay = '0.8s';
@@ -129,7 +113,6 @@ export class IntroComponent implements OnInit {
       introSubTitle.style.marginLeft = '0px';
       introDescription.style.opacity = '1';
       introDescription.style.marginLeft = '0px';
-      socialMedia.style.opacity = '1';
       contactButton.style.opacity = '1';
       navigatorIconImage1.style.opacity = '1';
       navigatorIconImage1.style.width = '30%';

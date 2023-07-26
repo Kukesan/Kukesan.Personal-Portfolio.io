@@ -3,7 +3,6 @@
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .portfolio-container {
@@ -33,10 +32,8 @@
 
 .intro-image {
     width: 90%;
-    /* height: 100%; */
     margin-left: 7%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    /* background-color: white; */
     border-radius: 8px;
 }
 
@@ -102,19 +99,6 @@
     opacity: 0;
 }
 
-#social-media {
-    opacity: 0;
-}
-
-.social-media-icon {
-    margin-top: 20px;
-    height: 40px;
-    width: 40px;
-    margin-right: 10px;
-}
-
-.contact-button-container {}
-
 .contact-button {
     margin-top: 20px;
     appearance: none;
@@ -139,7 +123,6 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     width: 200px;
-    will-change: transform;
     opacity: 0;
 }
 
@@ -183,16 +166,12 @@
 .navigate-row {
     display: flex;
     margin-top: 8vh;
-
 }
 
 .navigator-icon {
     flex: 20%;
     height: 80px;
-    /* background-color: white; */
     height: auto;
-
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
 }
 
 .navigate-details {
@@ -205,7 +184,6 @@
     display: block;
     height: 100%;
     border-radius: 3px;
-    /* border: 1px solid black; */
 }
 
 .navigator-icon-image {
@@ -214,8 +192,6 @@
     display: block;
     width: 30%;
     height: auto;
-
-    /* filter: brightness(0) invert(1); */
     filter: invert(20%) sepia(9%) saturate(2208%) hue-rotate(186deg) brightness(96%) contrast(85%) drop-shadow(2px 3px 2px #787777);
 }
 
@@ -242,35 +218,14 @@
     text-align: center;
     margin-top: 10px;
     font-family: var(--font);
-    /* width: 80%; */
 }
 
-#navigator-icon-image1 {
+.navigator-icon-image{
     opacity: 0;
     width: 20%;
 }
 
-#navigator-icon-image2 {
-    opacity: 0;
-    width: 20%;
-}
-
-#navigator-icon-image3 {
-    opacity: 0;
-    width: 20%;
-}
-
-#navigator-icon-text1 {
-    opacity: 0;
-    margin-top: 15px;
-}
-
-#navigator-icon-text2 {
-    opacity: 0;
-    margin-top: 15px;
-}
-
-#navigator-icon-text3 {
+#navigator-icon-text {
     opacity: 0;
     margin-top: 15px;
 }

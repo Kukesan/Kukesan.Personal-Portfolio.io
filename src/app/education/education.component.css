@@ -44,7 +44,7 @@
 }
 
 .education-row {
-    width: fill;
+    width: stretch;
     display: flex;
     background-color: white;
     margin-top: 2vh;
