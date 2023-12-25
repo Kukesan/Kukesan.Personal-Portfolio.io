@@ -157,6 +157,32 @@
     margin-left: 4vw;
 }
 
+@media only screen and (max-width: 992px) {
+    .portfolio-container1{
+        height: fit-content;
+        margin-top: 8vh;
+    }
+
+    .experience{
+        width: 90%;
+        display: block;
+        /* background-image: url("https://firebasestorage.googleapis.com/v0/b/portfolio-924c8.appspot.com/o/Source%20Images%2Fexperience.png?alt=media&token=6c46f24c-47b6-43ce-b48c-7d405f1bed43"); */
+        background-size:70%;
+        background-repeat: no-repeat;
+        background-position: right;
+        height: fit-content;
+    }
+
+    .experience-subject {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .experience-nav-image{
+        display: none;
+    }
+}
+
 .entertainment {
     margin-top: 10vh;
     height: 65vh;
@@ -172,6 +198,16 @@
 .entertainment-subject {
     margin-left: 40px;
     margin-top: 1vh;
+}
+
+@media only screen and (max-width: 992px) {
+    .portfolio-container2{
+        margin-top: 8vh;
+    }
+    .entertainment{
+        width: 90%;
+        margin-top: 8vh;
+    }
 }
 
 .portfolio-container3{
@@ -279,4 +315,24 @@
     z-index: 1;
     border-radius: 3px;
     opacity: 0;
+}
+
+@media only screen and (max-width: 992px) {
+    .portfolio-container3{
+        height: fit-content;
+        
+    }
+    .head{
+        width: 90%;
+    }
+    .project-title {
+        height: fit-content;
+    }
+    .link-container {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    .link-card {
+        flex: 40%;
+    }
 }

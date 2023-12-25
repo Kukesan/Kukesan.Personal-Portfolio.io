@@ -36,8 +36,17 @@
   padding: 15px 20px;
 }
 
-.contact-form-col {
+.first-row{
+  display: flex;
+}
+
+.contact-cell{
+  height: 25px;
   margin-top: 40px;
+}
+
+.contact-form-col {
+  
   padding: 4px 0;
   background: none;
   border: none;
@@ -46,24 +55,27 @@
   font-size: 14px;
   outline: none;
   transition: border-color 0.2s;
-  height: 25px;
+  
+  width: 100%;
 }
 
 .contact-form-name {
-  width: 43%;
+  width: 100%;
+  flex: 50%;
 }
 
 .contact-form-phone {
   margin-left: 4%;
-  width: 43%;
+  width: 100%;
+  flex: 50%;
 }
 
 .contact-form-email {
-  width: 90%;
+  width: 100%;
 }
 
 .contact-form-message {
-  width: 90%;
+  width: 100%;
 }
 
 .contact-form-btn {
@@ -147,4 +159,40 @@
   letter-spacing: 0.6px;
   margin-left: 2px;
   height: 8px;
+}
+
+div.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+.contact-form-btn:disabled {
+  background-color: #ccc; /* Grayed out background color */
+  color: var(--fonts-color); /* Grayed out text color */
+  cursor: not-allowed; /* Show 'not-allowed' cursor on hover */
+}
+
+.success-message {
+  padding: 10;
+  color: #246924;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 992px) {
+  .portfolio-container {
+    width: 90%;
+    display: block;
+    height: fit-content;
+  }
+
+  .contact-information{
+    padding: 2vh 0;
+  }
+
+  .contact-information-item {
+    margin-top: 2vh;
+  }
+  .contact-information-title {
+    margin-top: 2vh;
+  }
 }

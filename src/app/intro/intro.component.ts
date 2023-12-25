@@ -71,6 +71,7 @@ export class IntroComponent implements OnInit {
     setTimeout(() => {
       if (!this.appService.introInitialLoad) {
 
+        introImage.style.transitionDelay = '1s';
         introImage.style.transitionDuration = '1s';
 
         introTitle.style.transitionDuration = '1s';

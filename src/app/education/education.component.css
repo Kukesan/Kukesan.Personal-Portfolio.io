@@ -49,7 +49,6 @@
     background-color: white;
     margin-top: 2vh;
     margin-bottom: 2vh;
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     padding: 20px 10px;
     margin-left: 20px;
@@ -59,7 +58,7 @@
 .education-detail {
     margin-top: 2vh;
     margin-left: 1vw;
-    flex: 80%;
+    flex: 90%;
 }
 
 .education-heading {
@@ -75,11 +74,10 @@
     font-size: 14px;
     font-family: var(--font);
     color: var(--fonts-color);
-    height: 8px;
+    height:auto;
 }
 
 .education-duration {
-    margin-top: 0.5vh;
     font-size: 14px;
     font-family: var(--font);
     color: var(--fonts-color);
@@ -106,16 +104,40 @@
 }
 
 .dot1 {
-    margin-top: 12vh;
+    margin-top: 70px;
     margin-left: -15px;
 }
 
 .dot2 {
-    margin-top: 32vh;
+    margin-top: 220px;
     margin-left: -25px;
 }
 
 .dot3 {
-    margin-top: 52vh;
+    margin-top: 360px;
     margin-left: -25px;
+}
+
+@media only screen and (max-width: 992px) {
+    .portfolio-container{
+        width: 90%;
+    } 
+    .education{
+        display: block;
+        margin-top: 10vh;
+    }
+    .education-main-img {
+        display: none;
+    }
+    .education-detail {
+        margin-top: 1vh;
+        margin-left: 3vw;
+        flex: 90%;
+    }
+    .dot{
+        display: none;
+    }
+    .vl{
+        display: none;
+    }
 }

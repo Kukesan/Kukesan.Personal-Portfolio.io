@@ -63,7 +63,7 @@ export class SkillsComponent implements OnInit {
     new SkillLink("Hacker Rank", "https://www.hackerrank.com/K_Kukesan?hr_r=1", "https://live.staticflickr.com/65535/53055189741_4d84135af4_n.jpg"),
     new SkillLink("Pinterest", "https://www.pinterest.com/K_Kukesan/_saved/", "https://live.staticflickr.com/65535/53055190236_be696ef876.jpg"),
     new SkillLink("Solo Learn", "https://www.linkedin.com/in/ketheeswaran-kukesan/", "https://live.staticflickr.com/65535/53055190476_127d83f778.jpg"),
-    new SkillLink("Kaggle", "https://www.linkedin.com/in/ketheeswaran-kukesan/", "https://live.staticflickr.com/65535/53055563985_b9db2ae4ef_c.jpg")
+    // new SkillLink("Kaggle", "https://www.linkedin.com/in/ketheeswaran-kukesan/", "https://live.staticflickr.com/65535/53055563985_b9db2ae4ef_c.jpg")
   ]
 
   skills: Skill[] = [

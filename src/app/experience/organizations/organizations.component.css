@@ -11,7 +11,7 @@
     width: 70%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     display: flex;
-    height: 25vh;
+    height: fit-content;
     padding: 20px;
 }
 
@@ -42,9 +42,22 @@
 }
 
 .image-card {
-    max-width: 100%;
-    max-height: 100%;
+    /* max-width: 100%;
+    max-height: 100%; */
+
     margin-left: auto;
     margin-right: auto;
     display: block;
+    height: 200px;
+    width: 200px;
+}
+
+@media only screen and (max-width: 992px) {
+    .organization-container {
+        margin-top: 2vh;
+    }
+    .organization-row {
+        width: 100%;
+        margin: 0;
+    }
 }

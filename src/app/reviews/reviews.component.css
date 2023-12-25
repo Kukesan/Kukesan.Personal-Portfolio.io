@@ -96,3 +96,9 @@
     margin-bottom: 2vh;
     width: 95%;
 }
+
+@media only screen and (max-width: 992px) {
+    .portfolio-container {
+        width: 90%;
+    }
+}

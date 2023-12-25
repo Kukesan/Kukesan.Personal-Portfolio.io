@@ -154,3 +154,39 @@
 .ad-tag{
     flex: 15%;
 }
+
+@media only screen and (max-width: 992px) {
+    .head {
+        margin-bottom: 4vh;
+    }
+    .skills{
+        flex:100%
+    }
+    .nav-tag{
+        display: none;
+    }
+    .ad-tag{
+        display: none;
+    }
+    .link-container {
+        flex-wrap: wrap;
+    }
+    .link-card{
+        width: 40%;
+        margin-top: 2vh;
+    }
+    .skills-container {
+        width: 70%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .skill-card {
+        margin-left: 0;
+        width: 50%;
+        margin-bottom: 4vh;
+    }
+    .skills-right {
+        margin-top: 0;
+    }
+}

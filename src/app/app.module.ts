@@ -35,24 +35,8 @@ import { WorkComponent } from './experience/work/work.component';
 import { PhotoshopComponent } from './entertainment/photoshop/photoshop.component';
 import { PencilArtComponent } from './entertainment/pencil-art/pencil-art.component';
 import { PhotographyComponent } from './entertainment/photography/photography.component';
-// import { provideFirebaseApp, FirebaseAppModule } from '@angular/fire/app';
 
-// import { AngularFireModule } from '@angular/fire';
-// import { AngularFireStorageModule } from '@angular/fire/storage';
-
-
-const firebaseConfig = {
-  apiKey: "AIzaSyC_evFl3ZKT9ob4bpRq8ItnIf9PYgxubN4",
-  authDomain: "portfolio-924c8.firebaseapp.com",
-  databaseURL: "https://portfolio-924c8-default-rtdb.firebaseio.com",
-  projectId: "portfolio-924c8",
-  storageBucket: "portfolio-924c8.appspot.com",
-  messagingSenderId: "863651566343",
-  appId: "1:863651566343:web:9ede221a165ddb6279eba2",
-  measurementId: "G-9L8JSSZM3R"
-};
-
-const app = provideFirebaseApp(() => initializeApp(firebaseConfig));
+const app = provideFirebaseApp(() => initializeApp(environment.firebaseConfig));
 
 
 @NgModule({
@@ -89,8 +73,6 @@ const app = provideFirebaseApp(() => initializeApp(firebaseConfig));
     HttpClientModule,
     NgbModule,
     BrowserAnimationsModule,
-    // AngularFireModule.initializeApp(firebaseConfig),
-    // AngularFireStorageModule,
     FirebaseAppModule
   ],
   providers: [

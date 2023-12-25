@@ -95,7 +95,7 @@
 
 .heading-row {
     display: flex;
-    height: 40px;
+    height: fit-content;
 }
 
 .project-heading {
@@ -106,10 +106,12 @@
     margin-left: 2vw;
     color: var(--fonts-color);
     width: 90%;
+    height: fit-content;
 }
 
 .github-icon {
     margin-top: 2vh;
+    margin-right: 2vw;
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -126,12 +128,11 @@
 }
 
 .project-tech {
-    margin-top: 2vh;
     font-size: 16px;
     font-family: 'Helvetica';
     margin-left: 2vw;
     color: #012075;
-    height: 10px;
+    height: fit-content;
 }
 
 .project-subject {
@@ -139,8 +140,8 @@
     font-family: 'Helvetica';
     margin-left: 2vw;
     color: var(--fonts-color);
-    margin-top: 4vh;
     width: 90%;
+    height: fit-content;
 }
 
 .nav-tag{
@@ -151,4 +152,13 @@
 
 .ad-tag{
     flex: 15%;
+}
+
+@media only screen and (max-width: 992px) {
+    .nav-tag{
+        display: none;
+    }
+    .ad-tag{
+        display: none;
+    }
 }

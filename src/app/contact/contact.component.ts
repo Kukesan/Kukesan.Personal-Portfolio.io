@@ -1,9 +1,10 @@
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AppService } from '../app.service';
 import { SharedScrollService } from '../shared/shared-scroll.service';
 import { Subscription } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +13,11 @@ import { Subscription } from 'rxjs';
 })
 export class ContactComponent implements OnInit {
 
-  constructor(private http: HttpClient, private elementRef: ElementRef, private appService: AppService,private sharedScrollService: SharedScrollService) {
+  constructor(private http: HttpClient, 
+    private elementRef: ElementRef, 
+    private appService: AppService,
+    private sharedScrollService: SharedScrollService
+    ) {
     this.sharedScrollService.scrollTrigger$.subscribe(() => {
       this.scroll();
     });
@@ -23,9 +28,11 @@ export class ContactComponent implements OnInit {
   currentScrollElementId: string | null = null;
   observer: any = IntersectionObserver;
 
+  showSuccessMessage = false;
+
   contactForm = new FormGroup({
     name: new FormControl('', Validators.required),
-    email: new FormControl('', Validators.email),
+    email: new FormControl('', [Validators.email,Validators.required]),
     contactNo: new FormControl('', Validators.required),
     message: new FormControl('', Validators.required),
     isRead: new FormControl(false)
@@ -91,9 +98,11 @@ export class ContactComponent implements OnInit {
 
   addContactDetails() {
     console.log(this.contactForm.value)
-    this.http.post('https://portfolio-924c8-default-rtdb.firebaseio.com/contact.json', this.contactForm.value).subscribe(
+    this.http.post(environment.firebaseConfig.databaseURL+'/contact.json', this.contactForm.value).subscribe(
       (response: any) => {
         console.log(response)
+        this.contactForm.reset();
+        this.showSuccessMessage = true;
       }
     )
   }
