@@ -49,13 +49,6 @@ export class IntroComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    var introImage = document.getElementById('intro-image') as HTMLElement;
-    var introTitle = document.getElementById('intro-title') as HTMLElement;
-    var introSubTitle = document.getElementById('intro-subtitle') as HTMLElement;
-    var introDescription = document.getElementById('intro-description') as HTMLElement;
-
-    var contactButton = document.getElementById('contact-button') as HTMLElement;
-
     var navigatorIconImage1 = document.getElementById('navigator-icon-image1') as HTMLElement;
     var navigatorIconImage2 = document.getElementById('navigator-icon-image2') as HTMLElement;
     var navigatorIconImage3 = document.getElementById('navigator-icon-image3') as HTMLElement;
@@ -70,21 +63,6 @@ export class IntroComponent implements OnInit {
 
     setTimeout(() => {
       if (!this.appService.introInitialLoad) {
-
-        introImage.style.transitionDelay = '1s';
-        introImage.style.transitionDuration = '1s';
-
-        introTitle.style.transitionDuration = '1s';
-
-        introSubTitle.style.transitionDuration = '1s';
-        introSubTitle.style.transitionDelay = '0.2s';
-
-        introDescription.style.transitionDuration = '1s';
-        introDescription.style.transitionDelay = '0.4s';
-
-        contactButton.style.transitionDuration = '1s';
-        contactButton.style.transitionDelay = '0.8s';
-
         navigatorIconImage1.style.transitionDuration = '1s';
         navigatorIconImage1.style.transitionDelay = '1.4s';
 
@@ -105,16 +83,6 @@ export class IntroComponent implements OnInit {
 
         this.appService.introInitialLoad = true;
       }
-      introImage.style.opacity = '1';
-
-      introTitle.style.opacity = '1';
-      introTitle.style.marginLeft = '0px';
-
-      introSubTitle.style.opacity = '1';
-      introSubTitle.style.marginLeft = '0px';
-      introDescription.style.opacity = '1';
-      introDescription.style.marginLeft = '0px';
-      contactButton.style.opacity = '1';
       navigatorIconImage1.style.opacity = '1';
       navigatorIconImage1.style.width = '30%';
       navigatorIconImage2.style.opacity = '1';
@@ -129,14 +97,6 @@ export class IntroComponent implements OnInit {
       navigatorIconText3.style.marginTop = '8px';
     }, 5);
 
-    setTimeout(() => {
-      contactButton.style.transitionDelay = '0s';
-    }, 10);
-
-  }
-
-  scrollToNavigateSection() {
-    this.sharedScrollService.triggerScroll();
   }
 
   goProjects() {

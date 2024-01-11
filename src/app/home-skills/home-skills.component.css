@@ -1,0 +1,126 @@
+.portfolio-container3{
+    width: 100%;
+    background-color: var(--color1);
+    margin-top: 20vh;
+    padding: 30px 0;
+}
+
+
+.head {
+    margin-bottom: 5vh;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.project-title {
+    font-size: 32px;
+    font-family: var(--font);
+    font-weight: 600;
+    color:white;
+    height: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+.head-subtitle{
+    font-size: 16px;
+    text-align: center;
+    padding: 15px 0;
+    font-family: var(--font);
+    color: var(--fonts-color);
+    color:white;
+}
+
+.link-container {
+    width: 70%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    margin-top: 20px;
+}
+
+.link-row {
+    display: flex;
+}
+
+.link-card {
+    width: 18%;
+    flex: auto;
+    box-shadow: rgba(210, 210, 225, 0.25) 0px 2px 5px -1px, rgba(206, 194, 194, 0.3) 0px 1px 3px -1px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 1px solid white;
+    position: relative;
+    
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+.link-card-photo {
+    width: 40%;
+    height: 8vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 2vw;
+}
+
+.link-card-heading {
+    font-size: 16px;
+    font-family: var(--font);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0.8em 0em;
+    font-weight: 600;
+    height: 60px;
+     
+}
+
+.link-card-click {
+    text-align: center;
+    color: var(--fonts-color);
+    font-family: var(--font);
+    height: 6vh;
+    padding: 0.6em 0;
+    font-size: 16px;
+    background-color:#89c4f4 ;
+    position: absolute;
+    top: 6vh;
+    bottom: 6vh;
+    left: 3vw;
+    right: 3vw;
+    z-index: 1;
+    border-radius: 3px;
+    opacity: 0;
+}
+
+@media only screen and (max-width: 992px) {
+    .portfolio-container3{
+        height: fit-content;
+        
+    }
+    .head{
+        width: 90%;
+    }
+    .project-title {
+        height: fit-content;
+    }
+    .link-container {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    .link-card {
+        flex: 40%;
+    }
+}

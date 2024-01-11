@@ -35,6 +35,7 @@ import { WorkComponent } from './experience/work/work.component';
 import { PhotoshopComponent } from './entertainment/photoshop/photoshop.component';
 import { PencilArtComponent } from './entertainment/pencil-art/pencil-art.component';
 import { PhotographyComponent } from './entertainment/photography/photography.component';
+import { HomeSkillsComponent } from './home-skills/home-skills.component';
 
 const app = provideFirebaseApp(() => initializeApp(environment.firebaseConfig));
 
@@ -63,7 +64,8 @@ const app = provideFirebaseApp(() => initializeApp(environment.firebaseConfig));
     WorkComponent,
     PhotoshopComponent,
     PencilArtComponent,
-    PhotographyComponent
+    PhotographyComponent,
+    HomeSkillsComponent
   ],
   imports: [
     BrowserModule,
