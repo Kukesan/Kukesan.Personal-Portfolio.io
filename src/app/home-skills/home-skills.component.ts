@@ -13,11 +13,10 @@ export class HomeSkillsComponent implements OnInit {
   hoveredIndex: number | null = null;
   
   skillLinks: SkillLink[] = [
+    new SkillLink("Linkedin", "https://www.linkedin.com/in/kukesan/", "https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"),
     new SkillLink("Git Hub", "https://github.com/Kukesan", "https://img.icons8.com/?size=512&id=3tC9EQumUAuq&format=png"),
     new SkillLink("Hacker Rank", "https://www.hackerrank.com/K_Kukesan?hr_r=1", "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/160_Hackerrank_logo_logos-512.png"),
-    new SkillLink("Pinterest", "https://www.pinterest.com/K_Kukesan/_saved/", "https://www.freepnglogos.com/uploads/pinterest-logo-p-png-0.png"),
-    new SkillLink("Solo Learn", "https://www.linkedin.com/in/ketheeswaran-kukesan/", "https://seeklogo.com/images/S/sololearn-logo-98C11BA785-seeklogo.com.png"),
-    new SkillLink("Kaggle", "https://www.linkedin.com/in/ketheeswaran-kukesan/", "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/189_Kaggle_logo_logos-512.png")
+    new SkillLink("Pinterest", "https://www.pinterest.com/K_Kukesan/_saved/", "https://www.freepnglogos.com/uploads/pinterest-logo-p-png-0.png")
   ]
 
   ngOnInit(): void {

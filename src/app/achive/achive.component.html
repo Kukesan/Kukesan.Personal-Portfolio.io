@@ -7,98 +7,47 @@
             <p class="project-title">Awards & Achivements</p>
             <div class="title-underline" id="title-underline"></div>
         </div>
-        <div class="achive-row">
-            <div class="achive-left">
-                <div class="achive-container-details" id="achive-row1">
-                    <p class="achive-heading"> Road to CodeMania'21: Python Fundamentals & Algorithmic
-                        Programming</p>
-                    <p class="achive-subject">[Organized by IEEE Computer Society of SLTC]</p>
-                    <p class="achive-subject">In publishing and graphic design, Lorem ipsum is a placeholder text
-                        commonly used to demonstrate the visual form of a document or a typeface without relying on
-                        meaningful content.</p>
+        <div *ngFor="let achive of achives; let i = index">
+            <div class="achive-row" *ngIf="i%2==0">
+                <div class="achive-left">
+                    <div class="achive-container-details" id="achive-row1">
+                        <p class="achive-heading">{{achive.name}}</p>
+                        <p class="achive-subject">{{achive.about}}</p>
+                        <p class="achive-subject">{{achive.description}}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="achive-center">
-                <img class="achive-row-img" src="https://firebasestorage.googleapis.com/v0/b/portfolio-924c8.appspot.com/o/Source%20Images%2Faward.png?alt=media&token=a68a9606-df54-4ecf-8db0-f7452f11e472">
-                <div class="vl">
-                    <div class="vl1"></div>
-                    <div class="vl2"></div>
-                    <div class="vl3"></div>
+                <div class="achive-center">
+                    <img class="achive-row-img"
+                        src="https://firebasestorage.googleapis.com/v0/b/portfolio-924c8.appspot.com/o/Source%20Images%2Faward.png?alt=media&token=a68a9606-df54-4ecf-8db0-f7452f11e472">
+                    <div class="vl">
+                        <div class="vl1"></div>
+                        <div class="vl2"></div>
+                        <div class="vl3"></div>
+                    </div>
                 </div>
+                <div class="achive-right"></div>
             </div>
-            <div class="achive-right"></div>
-        </div>
 
-        <div class="achive-row">
-            <div class="achive-left">
-
-            </div>
-            <div class="achive-center">
-                <img class="achive-row-img" src="https://firebasestorage.googleapis.com/v0/b/portfolio-924c8.appspot.com/o/Source%20Images%2Faward.png?alt=media&token=a68a9606-df54-4ecf-8db0-f7452f11e472">
-                <div class="vl">
-                    <div class="vl1"></div>
-                    <div class="vl2"></div>
-                    <div class="vl3"></div>
+            <div class="achive-row" *ngIf="i%2==1">
+                <div class="achive-left"></div>
+                <div class="achive-center">
+                    <img class="achive-row-img"
+                        src="https://firebasestorage.googleapis.com/v0/b/portfolio-924c8.appspot.com/o/Source%20Images%2Faward.png?alt=media&token=a68a9606-df54-4ecf-8db0-f7452f11e472">
+                    <div class="vl">
+                        <div class="vl1"></div>
+                        <div class="vl2"></div>
+                        <div class="vl3"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="achive-right">
-                <div class="achive-container-details" id="achive-row2">
-                    <p class="achive-heading"> AdaGrad ’21, Introduction to Machine Learning</p>
-                    <p class="achive-subject">[Organized by IEEE Computer Society of SLTC]</p>
-                    <p class="achive-subject">In publishing and graphic design, Lorem ipsum is a placeholder text
-                        commonly used to demonstrate the visual form of a document or a typeface without relying on
-                        meaningful content.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="achive-row">
-            <div class="achive-left">
-                <div class="achive-container-details" id="achive-row3">
-                    <p class="achive-heading">Semi-Finale Under Open Category in Idealize 2021</p>
-                    <p class="achive-subject">[Team Event – organized by AIESEC in University of
-                        Moratuwa]</p>
-                    <p class="achive-subject">
-                        We created an Android Mobile App for Social Service
-                        Technology – Kodular App Creater, OneSignal, Firebase</p>
-                </div>
-            </div>
-            <div class="achive-center">
-                <img class="achive-row-img" src="https://firebasestorage.googleapis.com/v0/b/portfolio-924c8.appspot.com/o/Source%20Images%2Faward.png?alt=media&token=a68a9606-df54-4ecf-8db0-f7452f11e472">
-                <div class="vl">
-                    <div class="vl1"></div>
-                    <div class="vl2"></div>
-                    <div class="vl3"></div>
-                </div>
-            </div>
-            <div class="achive-right"></div>
-        </div>
-
-        <div class="achive-row">
-            <div class="achive-left">
-
-            </div>
-            <div class="achive-center">
-                <img class="achive-row-img" src="https://firebasestorage.googleapis.com/v0/b/portfolio-924c8.appspot.com/o/Source%20Images%2Faward.png?alt=media&token=a68a9606-df54-4ecf-8db0-f7452f11e472">
-                <div class="vl">
-                    <div class="vl1"></div>
-                    <div class="vl2"></div>
-                    <div class="vl3"></div>
-                </div>
-            </div>
-            <div class="achive-right">
-                <div class="achive-container-details" id="achive-row4">
-                    <p class="achive-heading">Semi Finalists Under University Category in Thinkwave 3.0</p>
-                    <p class="achive-subject">[Team Event – organized by AIESEC in University of
-                        Moratuwa]</p>
-                    <p class="achive-subject">
-                        We proposed Smart Drain System for some issues in public
-                        places. We Design with sensors & microcontrollers</p>
+                <div class="achive-right">
+                    <div class="achive-container-details" id="achive-row2">
+                        <p class="achive-heading">{{achive.name}}</p>
+                        <p class="achive-subject">{{achive.about}}</p>
+                        <p class="achive-subject">{{achive.description}}</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="ad-tag">
-
-    </div>
+    <div class="ad-tag"></div>
 </div>

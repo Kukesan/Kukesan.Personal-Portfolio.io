@@ -2,15 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { timer } from 'rxjs/internal/observable/timer';
 import { Subscription } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 export class Project {
-  id: number;
   name: string;
   description: string;
   technologies: string[];
   github: string;
-  constructor(id: number, name: string, description: string, technologies: string[], github: string) {
-    this.id = id;
+  constructor(name: string, description: string, technologies: string[], github: string) {
     this.name = name;
     this.description = description;
     this.technologies = technologies;
@@ -43,22 +42,14 @@ export class ProjectsComponent implements OnInit {
 
   isInitialLoad = true;
 
-  projects: Project[] = [
-    new Project(0, 'Vehicle Rent System', 'This is a project', ['SpringBot', ' Javascript', ' HTML'], 'https://github.com/Kukesan/Vehicle-Rent-System.git'),
-    new Project(1, 'Document Management System – 2nd Year Industry Project', 'We develop a system for addressing manipulation of documents for an organization with the use of web application. Role Full-Stack Developer [ system initialization module, Issue Report, User management and designing of dashboard ]', ['.NET Core', ' Angular', ' MSSQL'], ''),
-    new Project(2, 'Login System', 'This is a project', ['.NET Core MVC Architecture'], 'https://github.com/Kukesan/LoginProject.git'),
-    new Project(3, 'Personal Website-Frontend', 'This is a project', ['HTML', ' CSS'], 'https://github.com/Kukesan/Personal_Website-Frontend.git'),
-    new Project(4, 'Plant Hub-Web Page Group Project', 'This is a project', ['PHP', ' MySQL', ' Javascript', ' HTML', ' CSS'], 'https://github.com/Kukesan/Plant_Hub-Web_Page_Group_Project.git'),
-    new Project(5, 'Elasticities Economics', 'This is a project', ['C Language'], 'https://github.com/Kukesan/Elasticities-Economics.git'),
-    new Project(6, 'Vanila JS Calculator', 'This is a project', ['Javascript', ' HTML', ' CSS'], 'https://github.com/Kukesan/Vanila-JS-Calculator.git'),
-    new Project(7, 'Bank Secure Vault Door – 1 st Year Hardware Group Project', 'To design and develop Highly secured Bank vault room door which can prevent any kind of unauthorized access.', ['C language', ' Atmega32', ' Sensors'], '')
-  ]
+  projects: Project[] = [];
 
-  constructor() {
+  constructor(private http: HttpClient) { 
     this.animationSubscription = undefined;
   }
 
   ngOnInit(): void {
+    this.loadProjects();
     this.projects.forEach(() => this.projectAnimationStates.push('hidden'));
   }
 
@@ -91,6 +82,21 @@ export class ProjectsComponent implements OnInit {
     if (this.animationSubscription) {
       this.animationSubscription.unsubscribe();
     }
+  }
+
+  loadProjects() {
+    this.http.get('https://portfolio-924c8-default-rtdb.firebaseio.com/projects.json').subscribe(
+      (response: any) => {
+        const keys = Object.keys(response);
+        keys.forEach((key) => {
+          const value = response[key];
+          this.projects.push(value);
+        });
+      },
+      (error) => {
+        console.error('Error loading skills:', error);
+      }
+    );
   }
 
   goGitHub(url: string) {

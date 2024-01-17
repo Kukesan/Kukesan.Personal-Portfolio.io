@@ -2,10 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-// import { AngularFireStorage } from '@angular/fire/storage';
-// import firebase from 'firebase/app'; // Import Firebase
-import 'firebase/storage'; // Import Firebase Storage
-
+import 'firebase/storage';
 
 @Component({
   selector: 'app-comment-add',
@@ -23,23 +20,12 @@ export class CommentAddComponent implements OnInit {
     comment: new FormControl('', Validators.required)
   });
 
-
-
-  constructor(private http: HttpClient, public activeModal: NgbActiveModal, private modalService: NgbModal
-    // ,private storage: AngularFireStorage
-    ) { }
-
-
+  constructor(private http: HttpClient,
+    public activeModal: NgbActiveModal,
+    private modalService: NgbModal
+  ) { }
 
   ngOnInit(): void {
-  }
-
-  ngAfterViewInit() {
-    setTimeout(() => {
-      // var commentModel = document.getElementById('comment-model') as HTMLElement;
-      // commentModel.style.opacity = '0';
-      // commentModel.style.transitionDelay = '1s';
-    }, 500);
   }
 
   addCommentDetails() {

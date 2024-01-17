@@ -34,7 +34,7 @@
 }
 
 .link-container {
-    width: 70%;
+    width:50%;
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -68,7 +68,7 @@
   }
 
 .link-card-photo {
-    width: 40%;
+    width: 50%;
     height: 8vh;
     margin-left: auto;
     margin-right: auto;
@@ -98,8 +98,8 @@
     position: absolute;
     top: 6vh;
     bottom: 6vh;
-    left: 3vw;
-    right: 3vw;
+    left: 2vw;
+    right: 2vw;
     z-index: 1;
     border-radius: 3px;
     opacity: 0;

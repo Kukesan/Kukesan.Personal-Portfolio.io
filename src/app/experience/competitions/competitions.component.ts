@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 export class Competiton{
@@ -16,21 +17,14 @@ export class Competiton{
 })
 export class CompetitionsComponent implements OnInit {
 
-  competitions:Competiton[];
+  competitions:Competiton[]=[];
 
-  constructor() { 
-    this.competitions = [
-      new Competiton('Google Hash Code 2021,2022','Organized by Google'),
-      new Competiton('Hacktitude 2022','Web Development Competition organized by 99X'),
-      new Competiton('MoraSpirit Chess Championship 2022','Organized by Moraspirit in University of Moratuwa'),
-      new Competiton('MoraXtreme 2020,2021','Inter University Hackathon Organized by Computer Society of IEEE in University of Moratuwa'),
-      new Competiton('BenchMark 2021','UI/UX Design Competition organized by AIESEC in SLIIT'),
-      new Competiton('HackMoral 4.0 - 2021','Mini Hackathon Organized by INTECS, Faculty of Information Technology, University of Moratuwa'),
-      new Competiton('Decode 1.0','Hackathon Organized by ACM Student Chapter in University of Moratuwa'),
-    ]
+  constructor(private http: HttpClient)  { 
   }
 
   ngOnInit(): void {
+    this.loadCompetitions();
+    console.log(this.competitions);
   }
 
   ngAfterViewInit() {
@@ -43,5 +37,20 @@ export class CompetitionsComponent implements OnInit {
         competiton.style.transitionDuration = '1s';
       }
     }, 50);
+  }
+
+  loadCompetitions() {
+    this.http.get('https://portfolio-924c8-default-rtdb.firebaseio.com/competitons.json').subscribe(
+      (response: any) => {
+        const keys = Object.keys(response);
+        keys.forEach((key) => {
+          const value = response[key];
+          this.competitions.push(value);
+        });
+      },
+      (error) => {
+        console.error('Error loading skills:', error);
+      }
+    );
   }
 }

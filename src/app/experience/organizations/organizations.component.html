@@ -1,11 +1,11 @@
 <div class="organization-container">
     <div class="organization-row" *ngFor="let organization of organizations">
+        <div class="organization-image">
+            <img class="image-card" src={{organization.imageUrl}}>
+        </div>
         <div class="organization-details">
             <p class="organization-heading">{{organization.heading}}</p>
             <p class="organization-subject">{{organization.subject}}</p>
-        </div>
-        <div class="organization-image">
-            <img class="image-card" src={{organization.imageUrl}}>
         </div>
     </div>
 </div>

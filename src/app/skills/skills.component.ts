@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Subscription, timer } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 export class SkillLink {
   name: string;
@@ -59,30 +60,21 @@ export class SkillsComponent implements OnInit {
   skillAnimationStates: string[] = [];
 
   skillLinks: SkillLink[] = [
+    new SkillLink("Linkedin", "https://www.linkedin.com/in/kukesan/", "https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"),
     new SkillLink("Git Hub", "https://github.com/Kukesan", "https://live.staticflickr.com/65535/53054599762_6fe632260f_n.jpg"),
     new SkillLink("Hacker Rank", "https://www.hackerrank.com/K_Kukesan?hr_r=1", "https://live.staticflickr.com/65535/53055189741_4d84135af4_n.jpg"),
-    new SkillLink("Pinterest", "https://www.pinterest.com/K_Kukesan/_saved/", "https://live.staticflickr.com/65535/53055190236_be696ef876.jpg"),
-    new SkillLink("Solo Learn", "https://www.linkedin.com/in/ketheeswaran-kukesan/", "https://live.staticflickr.com/65535/53055190476_127d83f778.jpg"),
-    // new SkillLink("Kaggle", "https://www.linkedin.com/in/ketheeswaran-kukesan/", "https://live.staticflickr.com/65535/53055563985_b9db2ae4ef_c.jpg")
+    new SkillLink("Pinterest", "https://www.pinterest.com/K_Kukesan/_saved/", "https://live.staticflickr.com/65535/53055190236_be696ef876.jpg")
   ]
 
-  skills: Skill[] = [
-    new Skill("Programming Skills", ["C", "Java", "Python"]),
-    new Skill("Mobile Development", ["Swift", "Kodular"]),
-    new Skill("Web Development", ["HTML", "CSS", "JavaScript", "TypeScript", ".NET Core", "PHP", "Bootstrap"]),
-    new Skill('IDEs', ["Visual Studio Code", "Visual Studio", "IntelliJ IDEA", "PyCharm", "Xcode"]),
-    new Skill("Frameworks", ["Angular"]),
-    new Skill("Databases", ["MySQL", "Firebase", "MS SQL Server"]),
-    new Skill('Version Control', ["Git", "GitHub", "SourceTree", "BitBucket"]),
-    new Skill('Operating Systems', ["Windows", "Linux", "Mac OS", "Android", "iOS"]),
-    new Skill("Graphics", ["Adobe Photoshop", "Adobe Lightroom", 'SketchUp'])
-  ]
+  skills: Skill[] = []
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.skillLinkAnimationSubscription = undefined;
   }
 
   ngOnInit(): void {
+    this.loadSkills();
+    console.log(this.skills);
     this.skillLinks.forEach(() => this.skillLinkAnimationStates.push('hidden'));
     this.skills.forEach(() => this.skillAnimationStates.push('hidden'));
   }
@@ -109,6 +101,22 @@ export class SkillsComponent implements OnInit {
       }
     });
   }
+
+  loadSkills() {
+    this.http.get('https://portfolio-924c8-default-rtdb.firebaseio.com/skills.json').subscribe(
+      (response: any) => {
+        const keys = Object.keys(response);
+        keys.forEach((key) => {
+          const value = response[key];
+          this.skills.push(value);
+        });
+      },
+      (error) => {
+        console.error('Error loading skills:', error);
+      }
+    );
+  }
+  
 
   stopAnimation(): void {
     if (this.skillLinkAnimationSubscription) {

@@ -15,10 +15,11 @@
 
 .company-head{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .company-logo{
-    flex: 30%;
+    flex: 10%;
 }
 
 .logo-img{
@@ -27,7 +28,7 @@
 }
 
 .company-detail{
-    flex:70%;
+    flex:90%;
 }
 
 .company-name{
@@ -36,7 +37,7 @@
     font-weight: 600;
     color: var(--fonts-color);
     text-align: left;
-    margin-top: 3vh;
+    margin-top: 1vh;
     height: 12px;
 }
 

@@ -1,5 +1,4 @@
 .organization-container {
-    /* width: 70%; */
     margin-left: auto;
     margin-right: auto;
     background-color: white;
@@ -13,6 +12,8 @@
     display: flex;
     height: fit-content;
     padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .organization-details {
@@ -38,18 +39,15 @@
 }
 
 .organization-image {
-    flex: 40%;
+    flex: 20%;
 }
 
 .image-card {
-    /* max-width: 100%;
-    max-height: 100%; */
-
     margin-left: auto;
     margin-right: auto;
     display: block;
-    height: 200px;
-    width: 200px;
+    height: 120px;
+    width: 120px;
 }
 
 @media only screen and (max-width: 992px) {
