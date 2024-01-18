@@ -6,7 +6,6 @@ import { EducationComponent } from './education/education.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';
-import { LandingComponent } from './landing/landing.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -19,7 +18,6 @@ import { PencilArtComponent } from './entertainment/pencil-art/pencil-art.compon
 import { PhotoshopComponent } from './entertainment/photoshop/photoshop.component';
 
 const routes: Routes = [
-  // {path:'',component:LandingComponent},
   { path: '', component: HomeComponent },
   { path: 'education', component: EducationComponent },
   { path: 'home', component: HomeComponent },

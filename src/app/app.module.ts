@@ -13,7 +13,6 @@ import { InfoComponent } from './info/info.component';
 import { AchiveComponent } from './achive/achive.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { LandingComponent } from './landing/landing.component';
 import { SkillsComponent } from './skills/skills.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -53,7 +52,6 @@ const app = provideFirebaseApp(() => initializeApp(environment.firebaseConfig));
     AchiveComponent,
     ExperienceComponent,
     ProjectsComponent,
-    LandingComponent,
     SkillsComponent,
     IntroComponent,
     OrganizationsComponent,
