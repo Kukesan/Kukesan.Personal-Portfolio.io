@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Subscription, timer } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 export class SkillLink {
   name: string;
@@ -103,7 +104,7 @@ export class SkillsComponent implements OnInit {
   }
 
   loadSkills() {
-    this.http.get('https://portfolio-924c8-default-rtdb.firebaseio.com/skills.json').subscribe(
+    this.http.get(environment.firebaseConfig.databaseURL+'/skills.json').subscribe(
       (response: any) => {
         const keys = Object.keys(response);
         keys.forEach((key) => {

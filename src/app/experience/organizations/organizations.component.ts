@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 export class Organization {
   heading: string;
@@ -29,7 +30,7 @@ export class OrganizationsComponent implements OnInit {
   }
 
   loadOrganizations() {
-    this.http.get('https://portfolio-924c8-default-rtdb.firebaseio.com/organizations.json').subscribe(
+    this.http.get(environment.firebaseConfig.databaseURL+'/organizations.json').subscribe(
       (response: any) => {
         const keys = Object.keys(response);
         keys.forEach((key) => {

@@ -3,6 +3,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 import { timer } from 'rxjs/internal/observable/timer';
 import { Subscription } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 export class Project {
   name: string;
@@ -85,7 +86,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   loadProjects() {
-    this.http.get('https://portfolio-924c8-default-rtdb.firebaseio.com/projects.json').subscribe(
+    this.http.get(environment.firebaseConfig.databaseURL+'/projects.json').subscribe(
       (response: any) => {
         const keys = Object.keys(response);
         keys.forEach((key) => {

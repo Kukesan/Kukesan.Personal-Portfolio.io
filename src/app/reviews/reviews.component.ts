@@ -3,6 +3,7 @@ import { NgbActiveModal, NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstra
 import { CommentAddComponent } from './comment-add/comment-add.component';
 import { HttpClient } from '@angular/common/http';
 import { ModalService } from 'src/service/modal.service';
+import { environment } from 'src/environments/environment';
 
 export class Comment {
   name: string;
@@ -43,7 +44,7 @@ export class ReviewsComponent implements OnInit {
   }
 
   loadComments() {
-    this.http.get('https://portfolio-924c8-default-rtdb.firebaseio.com/comments.json').subscribe(
+    this.http.get(environment.firebaseConfig.databaseURL+'/comments.json').subscribe(
       (response: any) => {
         const keys = Object.keys(response);
         keys.forEach((key) => {

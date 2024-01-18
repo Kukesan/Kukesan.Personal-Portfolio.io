@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 export class Achive { 
   name : string;
@@ -61,7 +62,7 @@ export class AchiveComponent implements OnInit {
   }
 
   loadAchives() {
-    this.http.get('https://portfolio-924c8-default-rtdb.firebaseio.com/achives.json').subscribe(
+    this.http.get(environment.firebaseConfig.databaseURL+'/achives.json').subscribe(
       (response: any) => {
         const keys = Object.keys(response);
         keys.forEach((key) => {

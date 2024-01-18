@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import 'firebase/storage';
+import { environment } from 'src/environments/environment';
 import { ModalService } from 'src/service/modal.service';
 
 @Component({
@@ -35,7 +36,7 @@ export class CommentAddComponent implements OnInit {
 
   addCommentDetails() {
     console.log(this.commentForm.value)
-    this.http.post('https://portfolio-924c8-default-rtdb.firebaseio.com/comments.json', this.commentForm.value).subscribe(
+    this.http.post(environment.firebaseConfig.databaseURL+'/comments.json', this.commentForm.value).subscribe(
       (response: any) => {
         this.IsFormSubmitted = true;
       },

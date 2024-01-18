@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 export class Competiton{
   name:string;
@@ -40,7 +41,7 @@ export class CompetitionsComponent implements OnInit {
   }
 
   loadCompetitions() {
-    this.http.get('https://portfolio-924c8-default-rtdb.firebaseio.com/competitons.json').subscribe(
+    this.http.get(environment.firebaseConfig.databaseURL+'/competitions.json').subscribe(
       (response: any) => {
         const keys = Object.keys(response);
         keys.forEach((key) => {
