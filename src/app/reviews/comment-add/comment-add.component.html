@@ -1,6 +1,6 @@
 <div class="modal-content">
     <p class="comment-heading">Reviews & Comments</p>
-    <form class="comment-form" [formGroup]="commentForm" (ngSubmit)="addCommentDetails()">
+    <form class="comment-form" [formGroup]="commentForm" (ngSubmit)="addCommentDetails()" *ngIf="!IsFormSubmitted">
         <div class="top-row">
             <div class="top-row-left">
                 <img class="profile-img" src="https://cdn-icons-png.flaticon.com/128/3033/3033143.png">
@@ -14,4 +14,9 @@
         <textarea class="comment-row comment" placeholder="Comment" formControlName="comment" rows="4"></textarea>
         <button class="comment-button">Add</button>
     </form>
+    <div *ngIf="IsFormSubmitted">
+        <img class="thank-img" src="https://firebasestorage.googleapis.com/v0/b/portfolio-924c8.appspot.com/o/Source%20Images%2Fthank.png?alt=media&token=1a534e72-0ade-45a5-9e00-a98b4533bafe">
+        <p class="thank-para">Thank You For Your Valueable Reviews & Comments</p>
+        <button class="comment-button" (click)="okButtonClicked()">OK</button>
+    </div>
 </div>

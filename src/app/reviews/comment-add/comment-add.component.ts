@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import 'firebase/storage';
+import { ModalService } from 'src/service/modal.service';
 
 @Component({
   selector: 'app-comment-add',
@@ -13,6 +14,7 @@ export class CommentAddComponent implements OnInit {
 
   @Input() name: any;
   comment: string = '';
+  IsFormSubmitted: boolean = false;
 
   commentForm = new FormGroup({
     name: new FormControl('', Validators.required),
@@ -20,10 +22,13 @@ export class CommentAddComponent implements OnInit {
     comment: new FormControl('', Validators.required)
   });
 
+  modalRef: any;
+
   constructor(private http: HttpClient,
     public activeModal: NgbActiveModal,
-    private modalService: NgbModal
-  ) { }
+    private modalService: ModalService
+  ) { 
+  }
 
   ngOnInit(): void {
   }
@@ -32,13 +37,15 @@ export class CommentAddComponent implements OnInit {
     console.log(this.commentForm.value)
     this.http.post('https://portfolio-924c8-default-rtdb.firebaseio.com/comments.json', this.commentForm.value).subscribe(
       (response: any) => {
-        console.log(response)
-        this.commentForm.reset();
-        const modalRef = this.modalService.open(CommentAddComponent);
-        if (modalRef) {
-          modalRef.close();
-        }
+        this.IsFormSubmitted = true;
+      },
+      (error: any) => {
+        console.error('Error adding comment:', error);
       }
     )
+  }
+
+  okButtonClicked() {
+    this.modalService.closeModal();
   }
 }

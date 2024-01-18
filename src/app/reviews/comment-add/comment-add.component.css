@@ -18,6 +18,7 @@
     font-size: 16px;
     font-family: var(--font);
     margin-top: 2vh;
+    font-weight: bold;
 }
 
 .comment-row {
@@ -87,6 +88,24 @@
     background-color: var(--color1);
     color: white;
     font-family: var(--font);
+}
+
+.thank-img{
+    width: 20%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    border-radius: 50%;
+    min-width: 100px;
+}
+
+.thank-para{
+    text-align: center;
+    font-size: 14px;
+    font-family: var(--font);
+    margin-top: 2vh;
+
 }
 
 @media only screen and (max-width: 992px) {

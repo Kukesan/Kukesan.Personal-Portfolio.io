@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal, NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { CommentAddComponent } from './comment-add/comment-add.component';
 import { HttpClient } from '@angular/common/http';
+import { ModalService } from 'src/service/modal.service';
 
 export class Comment {
   name: string;
@@ -22,12 +23,19 @@ export class Comment {
 export class ReviewsComponent implements OnInit {
 
   comments: Comment[] = [];
+  private modalRef: NgbModalRef | null = null;
 
-  constructor(private modalService: NgbModal, private http: HttpClient) { }
+  constructor(private modalService: ModalService, private http: HttpClient) { }
 
   open() {
-    const modalRef = this.modalService.open(CommentAddComponent);
-    modalRef.componentInstance.name = 'World';
+    this.modalService.openModal(CommentAddComponent);
+  }
+
+  closeModal() {
+    if (this.modalRef) {
+      this.modalRef.close();
+      this.modalRef = null;
+    }
   }
 
   ngOnInit(): void {
@@ -40,7 +48,6 @@ export class ReviewsComponent implements OnInit {
         const keys = Object.keys(response);
         keys.forEach((key) => {
           const value = response[key];
-          console.log(value);
           this.comments.push(value);
         });
       }
