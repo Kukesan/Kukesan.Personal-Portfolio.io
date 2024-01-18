@@ -22,33 +22,6 @@ export class HomeSkillsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  overlayStyles(index: number) {
-    // const overlayColor = this.isMouseOver ? 'rgba(255, 255, 255, 0.7)' : 'transparent';
-    console.log(this.hoveredIndex)
-    if (this.hoveredIndex === index) {
-      console.log("gg"+this.hoveredIndex)
-      return {
-        // 'background-color': overlayColor,
-        'background-color': 'rgba(255, 255, 255, 0.7)',
-        'transition-duration':'0.2s'
-        /* Add any other overlay styles you want to change here */
-      };
-    }
-    // Return an empty object when not hovered, so no overlay is applied
-    return {};
-  }
-
-  overlayButton(index:number){
-    if (this.hoveredIndex === index) {
-      return {
-        'opacity':'1',
-        'transition-duration':'0.2s'
-      };
-    }
-    return {};
-  }
-
-
   onMouseEnter(index: number) {
     this.hoveredIndex = index;
   }

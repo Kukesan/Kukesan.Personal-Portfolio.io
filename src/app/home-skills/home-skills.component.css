@@ -5,7 +5,6 @@
     padding: 30px 0;
 }
 
-
 .head {
     margin-bottom: 5vh;
     width: 60%;
@@ -59,13 +58,12 @@
     
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+.link-card:hover  {
+    box-shadow: rgba(210, 210, 225, 0.25) 0px 2px 4px 0px, rgba(206, 194, 194, 0.3)  0px 2px 16px 0px;
+    border: 2px solid white;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
 
 .link-card-photo {
     width: 50%;

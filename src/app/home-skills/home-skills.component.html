@@ -5,12 +5,9 @@
             learning, and discover endless possibilities on this transformative journey.</p>
     </div>
     <div class="link-container" id="link-container">
-        <div class="link-card" id="link-card" *ngFor="let link of skillLinks; let i = index"
-            (mouseenter)="onMouseEnter(i)" (mouseleave)="onMouseLeave()">
-            <div class="overlay" [ngStyle]="overlayStyles(i)" ></div>
+        <div class="link-card" id="link-card" *ngFor="let link of skillLinks; let i = index">
             <img class="link-card-photo" src={{link.icon}}>
             <div class="link-card-heading">{{link.name}}</div>
-            <div class="link-card-click" (click)="goLink(link.link)" [ngStyle]="overlayButton(i)">Click Here</div>
         </div>
     </div>
 </div> 
