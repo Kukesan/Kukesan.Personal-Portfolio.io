@@ -1,0 +1,46 @@
+.aboutme-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8vh;
+}
+
+.nav-title {
+    color: var(--color2);
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    font-family: var(--font);
+}
+
+.nav-description {
+    color:var(--fonts-color);
+    font-size: 16px;
+    text-align: left;
+    width: 80%;
+    font-family: var(--font);
+    line-height: 1.6;
+}
+
+.aboutme-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+    width: 60%;
+}
+
+.aboutme-col-1{
+    flex: 50%;
+}
+
+.aboutme-col-2{
+    flex: 50%;
+}
+
+.aboutme-image{
+    width: 100%;
+    filter: invert(23%) sepia(13%) saturate(1172%) hue-rotate(185deg) brightness(95%) contrast(95%);
+}

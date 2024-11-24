@@ -1,0 +1,21 @@
+<div class="service-container">
+    <div class="nav-title">
+        Services
+    </div>
+    <div class="nav-description">
+        Empowering Your Digital Journey: Expert Solutions in Development, Hosting, and IT Consulting
+    </div>
+    <div class="service-row">
+        <div class="service-col" *ngFor="let service of services">
+                <img [src]="service.imgSrc" alt="{{ service.title }}" class="nav-image" />
+            <div class="service-subject">
+                <div class="nav-title2">
+                    {{ service.title }}
+                </div>
+                <div class="nav-description2">
+                    {{ service.description }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

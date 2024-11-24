@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="nav-title">
+        Projects
+    </div>
+    <div class="nav-description">
+        Empowering Your Digital Journey: Expert Solutions in Development, Hosting, and IT Consulting
+    </div>
+    <div class="project-row">
+        <div class="project-col" *ngFor="let project of projects">
+            <img [src]="project.imgSrc" alt="{{ project.title }}" class="nav-image" />
+            <div class="project-subject">
+                <div class="nav-title2">
+                    {{ project.title }}
+                </div>
+                <div class="nav-description2">
+                    {{ project.description }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -53,17 +53,17 @@
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    margin-top: 10px;
+    margin: 0;
     font-family: var(--font);
 }
 
 .navigator-icon-subject {
-    color: var(--font-color);
-    font-size: 16px;
+    color:#67b4f3;
+    font-size: 50px;
     text-align: center;
-    margin-top: 10px;
     font-family: var(--font);
-    height: 12vh;
+    font-weight: 800;
+    margin: 0;
 }
 
 .navigator-icon-image{
