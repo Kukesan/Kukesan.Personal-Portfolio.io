@@ -1,32 +1,55 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
-  styleUrls: ['./services.component.css']
+  styleUrls: ['./services.component.css'],
+  animations: [
+    trigger('fadeInOut', [
+      state('hidden', style({ opacity: 0, transform: 'translateY(20px)' })),
+      state('visible', style({ opacity: 1, transform: 'translateY(0)' })),
+      transition('hidden => visible', [
+        animate('1000ms ease-out')
+      ]),
+      transition('visible => hidden', [
+        animate('1000ms ease-out')
+      ])
+    ])
+  ]
 })
 export class ServicesComponent implements OnInit {
   services = [
     {
       imgSrc: 'assets/svg/app-development.svg',
-      title: 'Development',
-      description: 'From web development to mobile app development, we offer a wide range of services to help you establish a strong online presence.',
+      title: 'Web & Mobile Development',
+      description: 'Creating Responsive Websites and Apps for seamless User Experiences across all devices.',
     },
     {
       imgSrc: 'assets/svg/operator.svg',
-      title: 'Support',
-      description: 'We provide top-notch customer support and operational services tailored to your needs.',
+      title: 'IT Consulting',
+      description: 'Expert advice to optimize Technology, enhance Efficiency and Achieve your Business Goals.',
     },
     {
       imgSrc: 'assets/svg/hosting.svg',
       title: 'Hosting',
-      description: 'Reliable and secure hosting solutions to keep your websites and apps running smoothly.',
+      description: 'Secure, Fast and Scalable Hosting Solutions with 24/7 Support for uninterrupted Online Presence.',
     },
   ];
   
-  constructor() { }
+  isVisible = false;
+  constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit(): void {
-  }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          this.isVisible = true;
+        }
+      },
+      { threshold: 0.1 } // Adjust this threshold as needed
+    );
 
+    observer.observe(this.el.nativeElement);
+  }
 }

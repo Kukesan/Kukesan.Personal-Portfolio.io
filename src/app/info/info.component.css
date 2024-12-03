@@ -58,11 +58,12 @@
 }
 
 .intro-title {
-    color: white;
+    color: whitesmoke;
     font-size: 40px;
     font-weight: bold;
     text-align: left;
     font-family: var(--font);
+    margin-top: 0;
 }
 
 #intro-title {
@@ -71,7 +72,7 @@
 }
 
 .intro-subtitle {
-    color: white;
+    color: whitesmoke;
     font-size: 25px;
     font-weight: bold;
     text-align: left;
@@ -85,7 +86,7 @@
 }
 
 .intro-description {
-    color: white;
+    color: whitesmoke;
     font-size: 16px;
     text-align: left;
     margin-top: 20px;
@@ -103,10 +104,10 @@
     margin-top: 20px;
     appearance: none;
     background-color: transparent;
-    border: 2px solid white;
+    border: 2px solid whitesmoke;
     border-radius: 3px;
     box-sizing: border-box;
-    color: white;
+    color: whitesmoke;
     cursor: pointer;
     display: inline-block;
     font-family: var(--font);
@@ -132,7 +133,7 @@
 
 .contact-button:hover {
     color: var(--color1);
-    background-color: white;
+    background-color: whitesmoke;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
     border: 2px solid var(--color1);
@@ -141,6 +142,39 @@
 .contact-button:active {
     box-shadow: none;
     transform: translateY(0);
+}
+
+.social-media-col {
+    margin-top: 14vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.social-media-title {
+    color: var(--color2);
+    font-size: 18px;
+    text-align: center;
+    font-family: var(--font);
+}
+
+#social-media {
+    opacity: 0;
+    margin-top: 16vh;
+}
+
+.social-media-icon {
+    height: 36px;
+    width: 36px;
+    margin: 0 14px;
+    filter: invert(80%) sepia(100%) saturate(2%) hue-rotate(307deg) brightness(106%) contrast(101%);
+}
+
+.social-media-icon:hover {
+   transform:scale(1.1);
+   transition-duration: 0.5s;
 }
 
 @media only screen and (max-width: 992px) {
@@ -168,5 +202,12 @@
     }
     .contact-button{
         margin-bottom: 2vh;
+    }
+    .social-media-col{
+        margin-top: 2vh;
+        
+    }
+    .social-media-icon{
+        margin-bottom: 4vh;
     }
 }

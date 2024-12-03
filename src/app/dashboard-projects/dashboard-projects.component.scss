@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     width: 70%;
-    margin-top: 8vh;
+    margin-top: 12vh;
 }
 
 .nav-title {
@@ -28,14 +28,66 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-between;
     width: 100%;
     margin-top: 20px;
 }
 
 .project-col{
-    flex: 40%;
+    flex: 48%;
+    margin: 1%;
+    border: 2px solid var(--color1);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 2px;
+    background-color: var(--color1);
+}
+
+.nav-image{
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+}
+
+.project-subject{
     padding: 10px;
-    margin: 10px;
-    border: 1px solid #E5E5E5;
+}
+
+.nav-title2{
+    // color: var(--color1);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: var(--font);
+    color: white;
+}
+
+.nav-description2{
+    color: white;
+}
+
+.nav-button{
+    background-color: var(--color1);
+    color: white !important;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.nav-button:hover{
+    scale: 1.02;
+    transition-duration: 0.5s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+@media only screen and (max-width: 992px) {
+    .container{
+        width: 90%;
+    }
+    .project-row {
+        flex-direction: column;
+    }
+    .project-col{
+        margin-top: 2vh;
+    }
 }

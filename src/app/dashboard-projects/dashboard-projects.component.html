@@ -1,21 +1,22 @@
 <div class="container">
     <div class="nav-title">
-        Projects
+        Recent Works
     </div>
     <div class="nav-description">
-        Empowering Your Digital Journey: Expert Solutions in Development, Hosting, and IT Consulting
+        A Collection of Impactful Projects built to solve Real Challenges.
     </div>
     <div class="project-row">
-        <div class="project-col" *ngFor="let project of projects">
+        <div class="project-col" *ngFor="let project of projects"  [@fadeInOut]="isVisible ? 'visible' : 'hidden'">
             <img [src]="project.imgSrc" alt="{{ project.title }}" class="nav-image" />
             <div class="project-subject">
-                <div class="nav-title2">
+                <p class="nav-title2">
                     {{ project.title }}
-                </div>
-                <div class="nav-description2">
+                </p>
+                <p class="nav-description2">
                     {{ project.description }}
-                </div>
+                </p>
             </div>
         </div>
     </div>
+        <a href="https://www.linkedin.com/in/kukesan/details/projects/" target="_blank" class=" nav-button nav-link">See More</a>
 </div>

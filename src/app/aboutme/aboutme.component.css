@@ -18,7 +18,7 @@
     color:var(--fonts-color);
     font-size: 16px;
     text-align: left;
-    width: 80%;
+    width: 90%;
     font-family: var(--font);
     line-height: 1.6;
 }
@@ -29,18 +29,51 @@
     justify-content: center;
     align-items: center;
     margin-top: 3vh;
-    width: 60%;
+    width: 70%;
 }
 
 .aboutme-col-1{
-    flex: 50%;
+    flex: 56%;
 }
 
 .aboutme-col-2{
-    flex: 50%;
+    flex: 44%;
+}
+
+.aboutme-subject{
+    margin-left: 4%;
 }
 
 .aboutme-image{
     width: 100%;
     filter: invert(23%) sepia(13%) saturate(1172%) hue-rotate(185deg) brightness(95%) contrast(95%);
+}
+
+.soft-skills-col{
+    margin-top: 4vh;
+}
+
+.soft-skill::before {
+    content: "";
+    display: inline-block;
+    background-image: url('../../images/checked1.png'); /* Replace with your image URL */
+    background-size: contain;
+    width: 24px; /* Adjust size */
+    height: 24px;
+    margin-right: 8px;
+}
+
+.soft-skill{
+    font-size: 16px;
+    color: var(--fonts-color);
+    font-family: var(--font);
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 992px) {
+    .aboutme-row {
+        display: block;
+        width: 90%;
+    }
 }

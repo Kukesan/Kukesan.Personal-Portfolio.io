@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { transition, style, animate, trigger } from '@angular/animations';
 import { AppService } from '../app.service';
@@ -42,13 +42,32 @@ const fadeOut = trigger('fadeOut', [
 export class IntroComponent implements OnInit {
 
   show: boolean = false;
+  projectNumber: number = 0;
+  experienceOfYear: number = 0;
+  clientsNumber: number = 0;
 
-  constructor(private router: Router, private appService: AppService,private sharedScrollService: SharedScrollService) { }
+  constructor(private router: Router, private appService: AppService,private sharedScrollService: SharedScrollService, private el: ElementRef) { }
 
   ngOnInit(): void {
+    
   }
 
   ngAfterViewInit() {
+    const target = this.el.nativeElement.querySelector('#observerTarget');
+
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // When the element is in view, start incrementing
+          this.startIncrementing();
+          observer.unobserve(target); // Stop observing once started
+        }
+      });
+    });
+
+    observer.observe(target); // Observe the target element
+
     var navigatorIconImage1 = document.getElementById('navigator-icon-image1') as HTMLElement;
     var navigatorIconImage2 = document.getElementById('navigator-icon-image2') as HTMLElement;
     var navigatorIconImage3 = document.getElementById('navigator-icon-image3') as HTMLElement;
@@ -99,15 +118,29 @@ export class IntroComponent implements OnInit {
 
   }
 
-  goProjects() {
-    this.router.navigate(['projects']);
-  }
+  startIncrementing(): void {
+    const interval = setInterval(() => {
+      if (this.projectNumber < 10) {
+        this.projectNumber++;
+      } else {
+        clearInterval(interval); 
+      }
+    }, 100);
 
-  goAchivements() {
-    this.router.navigate(['achive']);
-  }
+    const interval2 = setInterval(() => {
+      if (this.experienceOfYear < 2) {
+        this.experienceOfYear++;
+      } else {
+        clearInterval(interval2); 
+      }
+    }, 100);
 
-  goSkills() {
-    this.router.navigate(['skills']);
+    const interval3 = setInterval(() => {
+      if (this.clientsNumber < 5) {
+        this.clientsNumber++;
+      } else {
+        clearInterval(interval3); 
+      }
+    }, 100);
   }
 }

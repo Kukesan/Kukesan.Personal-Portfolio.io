@@ -22,6 +22,8 @@ export class InfoComponent implements OnInit {
 
     var contactButton = document.getElementById('contact-button') as HTMLElement;
 
+    var socilaMedia = document.getElementById('social-media') as HTMLElement;
+
     setTimeout(() => {
       if (!this.appService.introInitialLoad) {
 
@@ -39,6 +41,9 @@ export class InfoComponent implements OnInit {
         contactButton.style.transitionDuration = '1s';
         contactButton.style.transitionDelay = '0.8s';
 
+        socilaMedia.style.transitionDuration = '1s';
+        socilaMedia.style.transitionDelay = '1s';
+
         this.appService.introInitialLoad = true;
       }
       introImage.style.opacity = '1';
@@ -48,9 +53,14 @@ export class InfoComponent implements OnInit {
 
       introSubTitle.style.opacity = '1';
       introSubTitle.style.marginLeft = '0px';
+
       introDescription.style.opacity = '1';
       introDescription.style.marginLeft = '0px';
+
       contactButton.style.opacity = '1';
+
+      socilaMedia.style.opacity = '1';
+      socilaMedia.style.marginTop = '14vh';
     }, 5);
 
     setTimeout(() => {

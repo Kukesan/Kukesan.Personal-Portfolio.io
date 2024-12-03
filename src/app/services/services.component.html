@@ -3,10 +3,10 @@
         Services
     </div>
     <div class="nav-description">
-        Empowering Your Digital Journey: Expert Solutions in Development, Hosting, and IT Consulting
+        Expert Solutions combining Creativity, Functionality and Technical Excellence Seamlessly.
     </div>
-    <div class="service-row">
-        <div class="service-col" *ngFor="let service of services">
+    <div class="service-row" [@fadeInOut]="isVisible ? 'visible' : 'hidden'">
+        <div class="service-col" *ngFor="let service of services" >
                 <img [src]="service.imgSrc" alt="{{ service.title }}" class="nav-image" />
             <div class="service-subject">
                 <div class="nav-title2">
