@@ -24,6 +24,7 @@ import { TechnologiesComponent } from './technologies/technologies.component';
 import { ServicesComponent } from './services/services.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { NgOptimizedImage } from '@angular/common';
 
 const app = provideFirebaseApp(() => initializeApp(environment.firebaseConfig));
 
@@ -51,7 +52,8 @@ const app = provideFirebaseApp(() => initializeApp(environment.firebaseConfig));
     HttpClientModule,
     NgbModule,
     BrowserAnimationsModule,
-    FirebaseAppModule
+    FirebaseAppModule,
+    NgOptimizedImage
   ],
   providers: [
     // app
