@@ -4,10 +4,10 @@ import { SharedScrollService } from '../shared/shared-scroll.service';
 
 @Component({
   selector: 'app-info',
-  templateUrl: './info.component.html',
-  styleUrls: ['./info.component.css']
+  templateUrl: './landing.component.html',
+  styleUrls: ['./landing.component.css']
 })
-export class InfoComponent implements OnInit {
+export class LandingComponent implements OnInit {
 
   constructor( private appService: AppService,private sharedScrollService: SharedScrollService) { }
 

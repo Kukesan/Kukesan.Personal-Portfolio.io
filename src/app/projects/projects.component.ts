@@ -1,107 +1,62 @@
-import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
-import { timer } from 'rxjs/internal/observable/timer';
-import { Subscription } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
-
-export class Project {
-  name: string;
-  description: string;
-  technologies: string[];
-  github: string;
-  constructor(name: string, description: string, technologies: string[], github: string) {
-    this.name = name;
-    this.description = description;
-    this.technologies = technologies;
-    this.github = github;
-  }
-}
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
-  selector: 'app-projects',
+  selector: 'app-dashboard-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css'],
+  styleUrls: ['./projects.component.scss'],
   animations: [
-    trigger('projectAnimation', [
-      state('hidden', style({
-        opacity: 0,
-        transform: 'translateY(20px)'
-      })),
-      state('visible', style({
-        opacity: 1,
-        transform: 'translateY(0)'
-      })),
-      transition('hidden => visible', animate('600ms ease-in'))
+    trigger('fadeInOut', [
+      state('hidden', style({ opacity: 0.5, transform: 'translateY(10px)' })),
+      state('visible', style({ opacity: 1, transform: 'translateY(0)' })),
+      transition('hidden => visible', [
+        animate('1000ms ease-out')
+      ]),
+      transition('visible => hidden', [
+        animate('1000ms ease-out')
+      ])
     ])
   ]
 })
 export class ProjectsComponent implements OnInit {
 
-  projectAnimationStates: string[] = [];
-  private animationSubscription: Subscription | undefined;
+  projects = [
+    {
+      imgSrc: 'https://live.staticflickr.com/65535/54174645923_d27143254e_z.jpg',
+      title: 'A2Z Cleaning Group',
+      description: 'At A2Z Clean Group, we meticulously select our team members, ensuring they possess the necessary qualifications to meet our stringent standards.',
+    },
+    {
+      imgSrc: 'https://live.staticflickr.com/65535/54174372796_7afabb949d_z.jpg',
+      title: 'Zie Engineering',
+      description: 'At Zie Engineering, we excel in delivering high-quality, precise, and innovative CNC machined parts that meet the diverse needs of our clients.',
+    },
+    {
+      imgSrc: 'https://live.staticflickr.com/65535/54174672208_ac4f0587bd_z.jpg',
+      title: 'Tamil Literary Assocition - UOM',
+      description: 'The Tamil Literary Association webpage serves as a digital platform to showcase the association history, objectives, and activities.',
+    },
+    {
+      imgSrc: 'https://live.staticflickr.com/65535/54174672373_623e6221e7_z.jpg',
+      title: 'Document Management System',
+      description: 'This Application for particular Organizations with the features like document manipulations, role-based access, User authentications, OCR and Barcode features.',
+    },
+  ]
 
-  isInitialLoad = true;
-
-  projects: Project[] = [];
-
-  constructor(private http: HttpClient) { 
-    this.animationSubscription = undefined;
-  }
+  isVisible = false;
+  constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit(): void {
-    this.loadProjects();
-    this.projects.forEach(() => this.projectAnimationStates.push('hidden'));
-  }
-
-  ngAfterViewInit() {
-
-    var titleUnderline = document.getElementById("title-underline") as HTMLElement;
-
-    setTimeout(() => {
-      titleUnderline.style.width = "15%";
-      titleUnderline.style.opacity = "1";
-      titleUnderline.style.transitionDuration = "3s";
-    }, 50);
-
-    let j = 0;
-    if (this.isInitialLoad) {
-      this.animationSubscription = timer(0, 250).subscribe(() => {
-        if (j < this.projectAnimationStates.length) {
-          this.projectAnimationStates[j] = 'visible';
-          j++;
-        } else {
-          this.stopAnimation();
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          this.isVisible = true;
         }
-      });
-      this.isInitialLoad = false; // Set flag to false after initial load
-      console.log("Initial load");
-    }
-  }
-
-  stopAnimation(): void {
-    if (this.animationSubscription) {
-      this.animationSubscription.unsubscribe();
-    }
-  }
-
-  loadProjects() {
-    this.http.get(environment.firebaseConfig.databaseURL+'/projects.json').subscribe(
-      (response: any) => {
-        const keys = Object.keys(response);
-        keys.forEach((key) => {
-          const value = response[key];
-          this.projects.push(value);
-        });
       },
-      (error) => {
-        console.error('Error loading skills:', error);
-      }
+      { threshold: 0.1 } // Adjust this threshold as needed
     );
-  }
 
-  goGitHub(url: string) {
-    window.open(url, "_blank");
+    observer.observe(this.el.nativeElement);
   }
 
 }

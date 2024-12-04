@@ -32,14 +32,14 @@ const fadeOut = trigger('fadeOut', [
 
 @Component({
   selector: 'app-intro',
-  templateUrl: './intro.component.html',
-  styleUrls: ['./intro.component.css'],
+  templateUrl: './summary.component.html',
+  styleUrls: ['./summary.component.css'],
   animations: [
     fadeIn,
     fadeOut
   ]
 })
-export class IntroComponent implements OnInit {
+export class SummaryComponent implements OnInit {
 
   show: boolean = false;
   projectNumber: number = 0;

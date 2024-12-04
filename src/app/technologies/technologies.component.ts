@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SkillLink } from '../skills/skills.component';
 
 export class TopSkill {
   name: string;
@@ -12,10 +11,10 @@ export class TopSkill {
 
 @Component({
   selector: 'app-top-skills',
-  templateUrl: './top-skills.component.html',
-  styleUrls: ['./top-skills.component.css']
+  templateUrl: './technologies.component.html',
+  styleUrls: ['./technologies.component.css']
 })
-export class TopSkillsComponent implements OnInit {
+export class TechnologiesComponent implements OnInit {
 
   constructor() { }
   

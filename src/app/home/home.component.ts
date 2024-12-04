@@ -2,7 +2,6 @@ import { Component, HostListener, OnInit, ElementRef } from '@angular/core';
 import { AppService } from '../app.service';
 import { Router } from '@angular/router';
 import { SharedScrollService } from '../shared/shared-scroll.service';
-import { SkillLink } from '../skills/skills.component';
 
 @Component({
   selector: 'app-home',
